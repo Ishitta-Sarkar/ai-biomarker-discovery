@@ -1,0 +1,11 @@
+sample_id,group,GeneA,GeneB,GeneC,GeneD,GeneE
+S1,Healthy,5,7,8,6,9
+S2,Healthy,4,8,7,5,8
+S3,Healthy,6,7,9,6,10
+S4,Healthy,5,6,8,5,9
+S5,Healthy,4,7,7,6,8
+S6,Disease,22,8,9,18,20
+S7,Disease,24,7,10,19,21
+S8,Disease,25,9,11,20,22
+S9,Disease,23,8,10,18,19
+S10,Disease,21,7,9,17,20
