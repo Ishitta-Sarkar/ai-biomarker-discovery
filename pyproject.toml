@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "tnbc-biomarkers"
-version = "1.0.0"
+version = "1.1.0"
 description = "TNBC versus non-TNBC transcriptomic biomarker analysis of GEO GSE76275"
 requires-python = ">=3.10"
 license = { text = "MIT" }

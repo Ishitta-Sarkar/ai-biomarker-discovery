@@ -4,40 +4,101 @@
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
 [![CI](https://github.com/Ishitta-Sarkar/ai-biomarker-discovery/actions/workflows/ci.yml/badge.svg)](https://github.com/Ishitta-Sarkar/ai-biomarker-discovery/actions/workflows/ci.yml)
 
-Reanalysis of public GEO series **GSE76275**: which genes differ between triple-negative and non-triple-negative breast tumors, which pathways those genes enrich for, and how an elastic-net logistic classifier compares with an L2 logistic model and a majority-class baseline under nested cross-validation.
+Which genes differ between triple-negative and non-triple-negative breast tumors, and does that signal hold in a cohort where both groups were processed together?
 
-This is a standalone analysis of a public microarray cohort. It is not an external validation and it is not a clinical test.
+Discovery uses public GEO series GSE76275. The label in that series is the same partition as the subseries, and the two matrices were normalised separately, so its internal classifier scores are confounded with batch. The numbers below therefore lead with TCGA-BRCA, a single RNA-seq matrix. This is a reanalysis of public data, not a clinical test.
 
 ## Question
 
-In the Affymetrix HG-U133 Plus 2.0 profiles deposited as GSE76275, which genes have a reproducible expression difference between TNBC and non-TNBC tumors, and can a linear classifier recover the submitted label inside this cohort?
+Do genes called between TNBC and non-TNBC in GSE76275 keep their direction in TCGA-BRCA, and can an elastic net trained on GSE76275 rank TCGA-BRCA tumors? Separately, what accuracy does the same nested cross-validation reach inside TCGA-BRCA, where the label is not a processing batch?
 
 ## Data
 
 | Item | Record |
 | --- | --- |
-| SuperSeries | [GSE76275](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76275) |
+| Discovery SuperSeries | [GSE76275](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76275) |
 | TNBC subseries | [GSE76124](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76124), 198 tumors |
 | Non-TNBC subseries | [GSE76274](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76274), 67 tumors |
-| Platform | [GPL570](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL570), Affymetrix HG-U133 Plus 2.0 |
-| Annotation file date | Aug 09 2016, read from the downloaded GEO annotation |
-| Processing stated by GEO | RMA in the Bioconductor `affy` package. The series matrices are already log2 intensities |
-| Cohort paper | Burstein et al., Clinical Cancer Research, 2015, PMID [25208879](https://pubmed.ncbi.nlm.nih.gov/25208879/) |
+| Discovery platform | [GPL570](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GPL570), Affymetrix HG-U133 Plus 2.0. Annotation file date Aug 09 2016 |
+| Discovery processing | RMA in the Bioconductor `affy` package, already log2. The two subseries were normalised separately |
+| External cohort | TCGA-BRCA primary tumors, [UCSC Xena HiSeqV2](https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/HiSeqV2.gz) |
+| External processing | log2(normalized RSEM count + 1), one matrix for the whole BRCA cohort |
+| External labels | [Xena clinical matrix](https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/BRCA_clinicalMatrix): ER, PR, and HER2 immunohistochemistry |
+| Cohort paper for GSE76275 | Burstein et al., Clinical Cancer Research, 2015, PMID [25208879](https://pubmed.ncbi.nlm.nih.gov/25208879/) |
 
-The code starts from the GSE76275 accession, reads the SuperSeries record, and downloads each SubSeries matrix and the GPL570 annotation. Those files are cached under `data/raw/` and are not committed. In this cohort the submitted triple-negative field is identical to subseries membership: every GSE76124 sample is TNBC and every GSE76274 sample is non-TNBC. The two matrices were RMA-normalised separately.
+TNBC in TCGA-BRCA means ER, PR, and HER2 IHC were all Negative. non-TNBC means each of the three was Positive or Negative and at least one was Positive. Equivocal and indeterminate HER2 calls were excluded. Downloads are cached under `data/raw/` and are not committed.
+
+## Results
+
+Numbers are from one run. The machine-readable copy is `results/summary.json`. The generated prose is `results/RESULTS.md`.
+
+### TCGA-BRCA, processed as one cohort
+
+721 primary tumors had expression and a complete IHC call: **116 TNBC and 605 non-TNBC**, 20,530 genes. None failed the median pairwise correlation filter (range 0.866–0.951, median 0.935). Expression ran from 0.00 to 20.81 (median 7.60).
+
+Nested cross-validation inside this cohort, with the same 5×5 folds, 250 genes, and penalty grids as the discovery model:
+
+| Model | Pooled ROC AUC | Mean fold ROC AUC (SD) | Mean balanced accuracy (SD) | Mean accuracy (SD) | Mean F1 (SD) |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Elastic net | 0.963 | 0.963 (0.024) | 0.918 (0.037) | 0.932 (0.029) | 0.811 (0.075) |
+| L2 logistic regression | 0.960 | 0.960 (0.026) | 0.924 (0.044) | 0.931 (0.036) | 0.813 (0.088) |
+| Majority-class baseline | 0.497 | 0.500 (0.000) | 0.500 (0.000) | 0.839 (0.003) | 0.000 (0.000) |
+
+F1 is for the TNBC class. The majority class is non-TNBC, so the baseline F1 is 0. The baseline accuracy of 0.839 is 605/721. Across outer folds the elastic net selected C values 0.01 and 0.10 and l1_ratio values 0.15, 0.50, and 0.85.
+
+![External ROC for the model trained on GSE76275](results/figures/tcga_external_roc.png)
+
+The locked elastic net was trained only on GSE76275 (top 250 shared genes by absolute Welch t, then inner cross-validation) and applied to TCGA-BRCA after z-scoring each gene inside its own cohort. It selected C 0.01 and l1_ratio 0.15, with 114 non-zero coefficients.
+
+| External score | ROC AUC | Balanced accuracy | Accuracy | F1 |
+| --- | ---: | ---: | ---: | ---: |
+| Elastic net trained on GSE76275 | 0.942 | 0.532 | 0.215 | 0.291 |
+| Predict the TCGA-BRCA majority class | 0.500 | 0.500 | 0.839 | 0.000 |
+| Predict the GSE76275 majority class (TNBC) | 0.500 | 0.500 | 0.161 | 0.277 |
+
+The ranking transfers (ROC AUC 0.942). The 0.5 probability cut does not: TNBC is 116 of 721 external tumors and 198 of 265 discovery tumors, and the cut was not re-fit on TCGA-BRCA. Balanced accuracy at that cut is 0.532.
+
+On the same call rule (FDR ≤ 0.05 and absolute log2 fold change ≥ 1), TCGA-BRCA called 2,636 genes (1,361 higher in TNBC, 1,275 higher in non-TNBC). 13,650 genes had FDR ≤ 0.05 with no fold-change filter.
+
+Of the **486** GSE76275 calls, **448** were measured in TCGA-BRCA. **447** had the same log2 fold-change sign. **445** had the same sign and FDR ≤ 0.05. **394** had the same sign and also absolute log2 fold change ≥ 1.
+
+### GSE76275 internal result, confounded with batch
+
+Every GSE76124 sample is TNBC and every GSE76274 sample is non-TNBC. The matrices were RMA-normalised separately. Nested cross-validation inside GSE76275 is therefore not an estimate of performance on a new batch.
+
+| Model | Pooled ROC AUC | Mean balanced accuracy (SD) | Mean accuracy (SD) |
+| --- | ---: | ---: | ---: |
+| Elastic net | 1.000 | 1.000 (0.000) | 1.000 (0.000) |
+| L2 logistic regression | 1.000 | 1.000 (0.000) | 1.000 (0.000) |
+| Majority-class baseline | 0.488 | 0.500 (0.000) | 0.747 (0.010) |
+
+The baseline accuracy 0.747 is 198/265. Its within-fold ROC AUC is 0.500. The pooled baseline AUC is 0.488 because each fold's score is that fold's training prevalence. One label permutation of the elastic net had pooled ROC AUC 0.476. Every outer fold selected C 0.01 and l1_ratio 0.15. Mean non-zero coefficients: 127.8 of 250.
+
+The discovery differential expression, which uses the same confounded partition, tested 20,848 genes in 265 tumors. At FDR ≤ 0.05 and absolute log2 fold change ≥ 1 it called 486 genes (188 higher in TNBC, 298 higher in non-TNBC). Without the fold-change filter, 12,897 genes had FDR ≤ 0.05. The median Welch–Satterthwaite degrees of freedom was 126.5. The smallest FDR was 5.291e-71 for FZD9 (log2 fold change 1.55, probe `207639_at`). No sample failed the correlation filter (median pairwise correlation 0.856–0.930). Among 248 samples with ER, PR, and HER2 all recorded, the receptor pattern matched the submitted triple-negative field in every case. PC1 and PC2 of the 2,000 most variable genes explained 19.5% and 11.3% of the variance and do not separate the groups cleanly.
+
+![Volcano plot for the confounded GSE76275 contrast](results/figures/volcano.png)
+
+![Heatmap of GSE76275 calls with the smallest FDR](results/figures/heatmap_top_genes.png)
+
+![GSE76275 principal components](results/figures/pca_samples.png)
+
+g:Profiler `e114_eg62_p19_9dc92ac8` (timestamp 2026-11-24T16:25:37.683279+00:00) returned 104 terms for genes higher in TNBC and 7 for genes higher in non-TNBC. The leading KEGG terms were Cell cycle (p = 3.828e-07) and AMPK signaling pathway (p = 0.005).
+
+The run took 72.0 seconds after the public files were cached.
 
 ## Methods
 
 Defaults live in `src/tnbc_biomarkers/config.py`.
 
-1. **Parse.** Sample characteristics are read cell by cell. GEO does not align those rows by key, so each value is split on the first colon. The label is the submitted `triple-negative status` field (`TN` or `not TN`).
-2. **Gene collapse.** Affymetrix control probes (`AFFX*`) are removed. Probes with no symbol, a placeholder symbol, or more than one symbol (`///`) are removed. For each remaining symbol the probe with the highest mean expression is kept. Ties break toward the smaller probe id. This run tested 20,848 genes from 54,675 probes.
-3. **QC.** A sample is removed if its median Pearson correlation with the other samples is below 0.80. No sample failed. Principal components are computed on the 2,000 most variable genes after standardisation.
-4. **Differential expression.** On the log2 matrix, log2 fold change is the TNBC mean minus the non-TNBC mean. Each gene is tested with a two-sided Welch t-test. P-values are adjusted by Benjamini–Hochberg. A gene is called when FDR ≤ 0.05 and the absolute log2 fold change is at least 1.
-5. **Figures.** A volcano plot and a clustered heatmap of row z-scores for the called genes with the smallest FDR (40 genes).
-6. **Classification.** The positive class is TNBC. Outer evaluation is 5-fold stratified cross-validation (`random_state` 42). Inside each training fold, genes are ranked by the absolute Welch t statistic on that fold only, and the top 250 are standardised and passed to logistic regression. Inner 5-fold cross-validation selects `C` and, for the elastic net, the L1 ratio, by ROC AUC. Class weights are balanced and the decision threshold is 0.5. The elastic-net grid is `C` in {0.01, 0.1, 1, 10, 100} and `l1_ratio` in {0.15, 0.5, 0.85} (`saga`). The L2 model uses the same features and the same `C` grid (`lbfgs`). The majority-class baseline predicts the training majority label; its score is the training prevalence.
-7. **Negative control.** The same elastic net is fit once after permuting the group labels with a NumPy Generator seeded at 43, one more than the analysis seed. That single permutation is not a p-value.
-8. **Enrichment.** Genes called in each direction are sent to g:Profiler (`hsapiens`, GO biological process, KEGG, Reactome, g:SCS, custom background of the tested genes). This run queried g:Profiler `e114_eg62_p19_9dc92ac8`.
+1. **Discovery labels.** The GSE76275 accession is fetched, its SuperSeries record is parsed, and each subseries matrix is downloaded. Sample characteristics are read cell by cell. The label is the submitted `triple-negative status` field.
+2. **Gene collapse.** Control probes (`AFFX*`), probes without one gene symbol, and multi-symbol probes are removed. The probe with the highest mean is kept for each symbol.
+3. **QC.** A sample is removed if its median Pearson correlation with the other samples is below 0.80.
+4. **Differential expression.** Log2 fold change is the TNBC mean minus the non-TNBC mean. Each gene gets a two-sided Welch t-test and a Benjamini–Hochberg FDR. A call requires FDR ≤ 0.05 and absolute log2 fold change ≥ 1.
+5. **External labels.** TCGA-BRCA HiSeqV2 and the Xena clinical matrix are downloaded. Primary tumors only. TNBC is ER-negative, PR-negative, and HER2-IHC-negative. Equivocal and indeterminate HER2 calls are dropped.
+6. **Transfer.** On GSE76275, genes shared with TCGA-BRCA are ranked by absolute Welch t and the top 250 are kept. An elastic net is tuned by inner 5-fold ROC AUC on that discovery matrix only. Each gene is then z-scored inside GSE76275 and, separately, inside TCGA-BRCA. Coefficients learned in discovery z-score units are applied to the external z-scores. The probability cut stays at 0.5.
+7. **Within-batch model.** The same nested cross-validation used for discovery is run on TCGA-BRCA alone. Scaling there is the training-fold standardisation applied to the test fold, not a second per-cohort z-score.
+8. **Replication.** A discovery call replicates in direction when the TCGA-BRCA log2 fold change has the same sign. Significance is FDR ≤ 0.05. The stricter count also requires absolute log2 fold change ≥ 1.
+9. **Enrichment.** Discovery calls in each direction are sent to g:Profiler (GO biological process, KEGG, Reactome, g:SCS, background of the tested genes).
 
 ## Quickstart
 
@@ -50,98 +111,33 @@ python -m tnbc_biomarkers --cache data/raw --outdir results
 pytest
 ```
 
-The full command downloads the GEO files, writes `results/`, and prints the same text as `results/RESULTS.md`. CI does not download GEO. It lints the package and runs pytest, including the cached 16 × 40 gene matrix in `tests/fixtures/gse76275_subset.csv` taken from this run.
-
-## Results
-
-Numbers below are from one run of the command above. The machine-readable copy is `results/summary.json`. Full tables are in `results/tables/`.
-
-![Principal components of the 2,000 most variable genes](results/figures/pca_samples.png)
-
-PC1 and PC2 explain 19.5% and 11.3% of the variance. The groups overlap on these two components. Colour is the submitted TNBC label, which is also the subseries label.
-
-![Volcano plot of TNBC versus non-TNBC](results/figures/volcano.png)
-
-Positive log2 fold change means higher in TNBC. Dashed lines are absolute log2 fold change 1 and FDR 0.05. Grey points are not called. The legend counts are 188 genes higher in TNBC, 298 higher in non-TNBC, and 20,362 not called.
-
-![Heatmap of called genes with the smallest FDR](results/figures/heatmap_top_genes.png)
-
-Row z-scores. The colour bar is the submitted group.
-
-The run kept all 265 tumors (198 TNBC, 67 non-TNBC). Median pairwise correlation of the retained samples ranged from 0.856 to 0.930 (median 0.911). Expression ranged from 3.43 to 15.62 (median 7.73) and was analysed as the submitted log2 RMA matrix. Among 248 samples with ER, PR, and HER2 all recorded, the receptor pattern matched the submitted triple-negative field in every case.
-
-At FDR ≤ 0.05 and absolute log2 fold change ≥ 1, **486** genes were called (188 higher in TNBC, 298 higher in non-TNBC). Without the fold-change filter, 12,897 genes had FDR ≤ 0.05. The median Welch–Satterthwaite degrees of freedom was 126.5. The smallest FDR was 5.291e-71 for **FZD9** (log2 fold change 1.55, probe `207639_at`).
-
-| Gene | log2 fold change | FDR | Higher in | Called | Probe |
-| --- | ---: | ---: | --- | --- | --- |
-| FZD9 | 1.55 | 5.291e-71 | TNBC | yes | 207639_at |
-| COL18A1-AS1 | -1.01 | 1.137e-68 | non-TNBC | yes | 1564017_at |
-| SKA1 | 1.17 | 9.298e-64 | TNBC | yes | 217640_x_at |
-| MIR924HG | 0.62 | 3.998e-54 | TNBC | no | 240365_at |
-| GTSE1 | 1.09 | 1.684e-53 | TNBC | yes | 211040_x_at |
-| ORC1 | 1.30 | 6.258e-52 | TNBC | yes | 205085_at |
-| EN1 | 2.46 | 6.258e-52 | TNBC | yes | 220559_at |
-| DBF4B | 1.06 | 1.518e-49 | TNBC | yes | 238508_at |
-
-Called means both thresholds were met. MIR924HG has a small FDR and a log2 fold change of 0.62, so it is not called.
-
-Nested cross-validation, with TNBC as the positive class:
-
-| Model | Pooled ROC AUC | Mean fold ROC AUC (SD) | Mean balanced accuracy (SD) | Mean accuracy (SD) | Mean F1 (SD) |
-| --- | ---: | ---: | ---: | ---: | ---: |
-| Elastic net | 1.000 | 1.000 (0.000) | 1.000 (0.000) | 1.000 (0.000) | 1.000 (0.000) |
-| L2 logistic regression | 1.000 | 1.000 (0.000) | 1.000 (0.000) | 1.000 (0.000) | 1.000 (0.000) |
-| Majority-class baseline | 0.488 | 0.500 (0.000) | 0.500 (0.000) | 0.747 (0.010) | 0.855 (0.007) |
-
-The baseline accuracy of 0.747 is the rate from always predicting TNBC, the majority class (198/265). Its balanced accuracy is 0.500. Inside a fold the baseline score is constant, so the fold ROC AUC is 0.500. The pooled baseline AUC is 0.488 because the score is the training prevalence, which was 0.745 in three folds and 0.750 in two. One label permutation of the elastic net had pooled ROC AUC 0.476.
-
-Every outer fold selected elastic-net `C` 0.01 and `l1_ratio` 0.15, the smallest value of each grid. The model kept a mean of 127.8 non-zero coefficients out of 250 selected genes. 95 genes were non-zero in every fold. The first 15, ordered by mean absolute coefficient, were COL18A1-AS1, FZD9, C5orf49, LOC101930608, CACNG4, TMEM75, GRIK3, GTSE1, E2F1, HEXA-AS1, ATP11A-AS1, SLC25A21-AS1, MIR4435-2HG, DEFB132, and DMPK.
-
-g:Profiler returned 104 terms for the 188 genes higher in TNBC and 7 terms for the 298 genes higher in non-TNBC. The background was the 20,848 tested genes. Leading terms:
-
-| Direction | Source | Term | ID | p-value | Intersection | Term size |
-| --- | --- | --- | --- | ---: | ---: | ---: |
-| Higher in TNBC | GO:BP | epithelium development | GO:0060429 | 1.698e-07 | 39 | 1137 |
-| Higher in TNBC | KEGG | Cell cycle | KEGG:04110 | 3.828e-07 | 13 | 156 |
-| Higher in TNBC | KEGG | Cadherin signaling | KEGG:04519 | 1.325e-06 | 18 | 359 |
-| Higher in TNBC | REAC | Formation of the cornified envelope | REAC:R-HSA-6809371 | 1.397e-06 | 11 | 98 |
-| Higher in TNBC | GO:BP | mitotic cell cycle | GO:0000278 | 6.367e-06 | 31 | 838 |
-| Higher in non-TNBC | GO:BP | response to endogenous stimulus | GO:0009719 | 0.002 | 47 | 1386 |
-| Higher in non-TNBC | KEGG | AMPK signaling pathway | KEGG:04152 | 0.005 | 9 | 117 |
-| Higher in non-TNBC | KEGG | Hormone signaling | KEGG:04081 | 0.007 | 12 | 212 |
-| Higher in non-TNBC | GO:BP | cellular response to endogenous stimulus | GO:0071495 | 0.008 | 41 | 1167 |
-| Higher in non-TNBC | GO:BP | mammary gland alveolus development | GO:0060749 | 0.015 | 6 | 20 |
-
-The run took 28.7 seconds after the GEO files were cached.
+CI lints the package and runs pytest, including a cached 16 × 40 subset of the GSE76275 gene matrix. It does not download GEO or TCGA.
 
 ## Limitations
 
-- **The label is confounded with subseries.** GSE76124 is entirely TNBC and GSE76274 is entirely non-TNBC, and the submitted matrices were RMA-normalised separately. Differential expression and the perfect internal AUC can mix tumor biology with series effects. The PCA plot does not show two cleanly separated clouds. A perfect nested-CV score inside this cohort is not evidence that the classifier would travel to a new study.
-- **There is no healthy-tissue arm and no external test set.** The contrast is TNBC versus other breast tumors from the same SuperSeries.
-- **Most of the transcriptome is FDR-significant.** 12,897 of 20,848 genes have FDR ≤ 0.05. The fold-change filter is what reduces the call set to 486 genes. With a shift this broad, a small p-value on its own is a weak claim about a specific biomarker.
-- **The elastic net does not beat L2 logistic regression here.** Both have pooled ROC AUC 1.000. The selected `C` and `l1_ratio` sit on the edge of the pre-specified grids, and a typical fold keeps about half of the 250 input genes.
-- **Probe collapse is incomplete.** Multi-mapped probes were dropped rather than resolved, and the representative probe is the one with the highest mean, not a specificity score. Some called probes are `_x_at` design probes (for example SKA1 `217640_x_at`). Symbols come from the August 2016 GPL570 annotation and include non-coding loci.
-- **Tests are Welch t-tests, not empirical-Bayes moderated statistics.** The median residual degrees of freedom is 126.5, so moderation would move the variance estimates less than it would in a small study, but the p-values are still unmoderated.
-- **Enrichment is one query of g:Profiler** at version `e114_eg62_p19_9dc92ac8` (timestamp 2026-11-24T16:17:33.749516+00:00). A later database build can change terms and p-values.
-- **The label permutation was done once.** It checks that a shuffled label does not also produce ROC AUC 1. It is not a null distribution.
+- The GSE76275 nested-CV ROC AUC of 1.000 is an internal score on a label that is identical to subseries. It is not evidence that the classifier survives a new batch.
+- TCGA-BRCA is RNA-seq and GSE76275 is microarray. The transfer z-scores each gene inside the cohort being scaled. That uses the external sample distribution, not the external labels.
+- The external probability cut was left at 0.5. With TNBC prevalence 0.747 in discovery and 0.161 in TCGA-BRCA, balanced accuracy at that cut is 0.532 even though the ROC AUC is 0.942.
+- Thirty-eight of the 486 discovery calls had no matching Hugo symbol in HiSeqV2. Matching was exact.
+- HER2 IHC equivocal tumors were excluded, so the external contrast is cleaner than a clinical HER2 call that uses FISH to resolve 2+ stains.
+- TCGA-BRCA can still carry plate and site effects. Those effects are not the same thing as normalising the two classes in separate matrices.
+- Welch tests are unmoderated. g:Profiler results are for database build `e114_eg62_p19_9dc92ac8`. The label permutation was done once and is not a null distribution.
 
 ## Layout
 
 ```text
-src/tnbc_biomarkers/    analysis package
+src/tnbc_biomarkers/    discovery, TCGA-BRCA fetch, transfer, and replication
 tests/                  unit tests and the cached GSE76275 subset
 results/                tables, figures, summary.json, RESULTS.md
-.github/workflows/ci.yml
-requirements.txt        pinned environment
 ```
 
 ## Citation
 
-If you use this analysis, cite the software metadata in [CITATION.cff](CITATION.cff) and the cohort paper:
+If you use this analysis, cite [CITATION.cff](CITATION.cff) and the discovery cohort paper:
 
 Burstein MD, Tsimelzon A, Poage GM, Covington KR, Contreras A, Fuqua SAW, Savage MI, Osborne CK, Hilsenbeck SG, Chang JC, Mills GB, Lau CC, Brown PH. Comprehensive genomic analysis identifies novel subtypes and targets of triple-negative breast cancer. *Clinical Cancer Research*. 2015;21(7):1688-1698. doi:10.1158/1078-0432.CCR-14-0432. PMID: 25208879.
 
-The GEO record also lists PMID 26921331.
+The GEO record also lists PMID 26921331. TCGA-BRCA expression and clinical fields were read from the UCSC Xena data hub.
 
 ## Author
 

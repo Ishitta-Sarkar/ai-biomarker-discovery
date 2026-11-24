@@ -453,7 +453,7 @@
   "enrichment": {
     "service": "g:Profiler",
     "version": "e114_eg62_p19_9dc92ac8",
-    "timestamp": "2026-11-24T16:17:33.749516+00:00",
+    "timestamp": "2026-11-24T16:25:37.683279+00:00",
     "domain_scope": "custom",
     "background_fallback": false,
     "sources": [
@@ -719,5 +719,334 @@
     "The data were analyzed with  Affy package in R, RMA method"
   ],
   "annotation_date": "Aug 09 2016",
-  "elapsed_seconds": 28.692153176000033
+  "external": {
+    "cohort": "TCGA-BRCA",
+    "expression_url": "https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/HiSeqV2.gz",
+    "clinical_url": "https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/BRCA_clinicalMatrix",
+    "expression_processing": "UCSC Xena TCGA.BRCA.sampleMap/HiSeqV2, log2(normalized RSEM count + 1), one matrix for the BRCA cohort",
+    "er_column": "breast_carcinoma_estrogen_receptor_status",
+    "pr_column": "breast_carcinoma_progesterone_receptor_status",
+    "her2_column": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+    "n_clinical_rows": 1247,
+    "n_labelled_primary_tumors": 722,
+    "n_with_expression": 721,
+    "checksums": {
+      "clinical": "39eb3be0fb86e6a577bd2cc01502a7fa5a271e1e1cba294e9dc644ad99580d7f",
+      "expression": "263bf67245cc4b9062676583c0ff0306f08471a26aafd5504037e1da22133746"
+    },
+    "n_samples_analysed": 721,
+    "n_tnbc": 116,
+    "n_non_tnbc": 605,
+    "n_samples_excluded": 0,
+    "correlation_threshold": 0.8,
+    "correlation_min": 0.8657061441376026,
+    "correlation_median": 0.935013155758041,
+    "correlation_max": 0.9506287328600127,
+    "n_genes": 20530,
+    "scale": {
+      "min": 0.0,
+      "median": 7.6028,
+      "max": 20.8112,
+      "assumed_log2": true
+    },
+    "differential_expression": {
+      "n_genes_tested": 20530,
+      "fdr_threshold": 0.05,
+      "log2fc_threshold": 1.0,
+      "n_fdr_only": 13650,
+      "n_significant": 2636,
+      "n_higher_in_tnbc": 1361,
+      "n_higher_in_non_tnbc": 1275,
+      "median_welch_df": 152.88602668567606
+    },
+    "transfer": {
+      "n_shared_genes": 16041,
+      "n_features": 250,
+      "C": 0.01,
+      "l1_ratio": 0.15,
+      "n_nonzero": 114,
+      "convergence_warnings": 0,
+      "scaling": "Each gene was z-scored inside its own cohort.",
+      "positive_class": "TNBC",
+      "decision_threshold": 0.5,
+      "n_test_samples": 721,
+      "n_test_tnbc": 116,
+      "n_test_non_tnbc": 605,
+      "elastic_net": {
+        "accuracy": 0.21497919556171982,
+        "balanced_accuracy": 0.5322314049586777,
+        "f1": 0.2907268170426065,
+        "roc_auc": 0.9418495297805642
+      },
+      "training_majority_baseline": {
+        "accuracy": 0.1608876560332871,
+        "balanced_accuracy": 0.5,
+        "f1": 0.27718040621266427,
+        "roc_auc": 0.5
+      },
+      "external_majority_baseline": {
+        "accuracy": 0.8391123439667129,
+        "balanced_accuracy": 0.5,
+        "f1": 0.0,
+        "roc_auc": 0.5
+      },
+      "roc_auc_on_figure": 0.9418495297805642,
+      "genes_head": [
+        "FZD9",
+        "GTSE1",
+        "SKA1",
+        "DBF4B",
+        "EN1",
+        "CACNG4",
+        "C5orf49",
+        "GDNF",
+        "FRMD7",
+        "ATAD3A",
+        "E2F1",
+        "TBX19",
+        "DLX5",
+        "RIBC1",
+        "GRIK3"
+      ]
+    },
+    "within_batch": {
+      "positive_class": "TNBC",
+      "n_samples": 721,
+      "n_tnbc": 116,
+      "n_non_tnbc": 605,
+      "outer_splits": 5,
+      "inner_splits": 5,
+      "n_features": 250,
+      "cs": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "l1_ratios": [
+        0.15,
+        0.5,
+        0.85
+      ],
+      "random_state": 42,
+      "convergence_warnings": 0,
+      "class_weight": "balanced",
+      "decision_threshold": 0.5,
+      "elastic_net": {
+        "folds": [
+          {
+            "accuracy": 0.9517241379310345,
+            "balanced_accuracy": 0.9376721763085399,
+            "f1": 0.8627450980392157,
+            "roc_auc": 0.9734848484848484,
+            "fold": 1,
+            "C": 0.01,
+            "l1_ratio": 0.15,
+            "n_nonzero": 105
+          },
+          {
+            "accuracy": 0.8888888888888888,
+            "balanced_accuracy": 0.8634567014013654,
+            "f1": 0.7037037037037037,
+            "roc_auc": 0.9349622709306504,
+            "fold": 2,
+            "C": 0.01,
+            "l1_ratio": 0.5,
+            "n_nonzero": 39
+          },
+          {
+            "accuracy": 0.9236111111111112,
+            "balanced_accuracy": 0.9193316564858067,
+            "f1": 0.7924528301886793,
+            "roc_auc": 0.9392741645706073,
+            "fold": 3,
+            "C": 0.1,
+            "l1_ratio": 0.5,
+            "n_nonzero": 46
+          },
+          {
+            "accuracy": 0.9652777777777778,
+            "balanced_accuracy": 0.9617319439453826,
+            "f1": 0.8979591836734694,
+            "roc_auc": 0.9852676967301474,
+            "fold": 4,
+            "C": 0.1,
+            "l1_ratio": 0.85,
+            "n_nonzero": 28
+          },
+          {
+            "accuracy": 0.9305555555555556,
+            "balanced_accuracy": 0.9058569888609413,
+            "f1": 0.8,
+            "roc_auc": 0.9820337765001796,
+            "fold": 5,
+            "C": 0.01,
+            "l1_ratio": 0.15,
+            "n_nonzero": 110
+          }
+        ],
+        "mean": {
+          "accuracy": 0.9320114942528737,
+          "balanced_accuracy": 0.9176098934004072,
+          "roc_auc": 0.9630045514432866,
+          "f1": 0.8113721631210137
+        },
+        "std": {
+          "accuracy": 0.02927233859865902,
+          "balanced_accuracy": 0.03682021855143056,
+          "roc_auc": 0.024068113905567724,
+          "f1": 0.07452559120230712
+        },
+        "pooled_roc_auc": 0.9626389284696495
+      },
+      "l2_logistic": {
+        "folds": [
+          {
+            "accuracy": 0.9586206896551724,
+            "balanced_accuracy": 0.9585055096418733,
+            "f1": 0.8846153846153846,
+            "roc_auc": 0.9727961432506886,
+            "fold": 1,
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "n_nonzero": 250
+          },
+          {
+            "accuracy": 0.875,
+            "balanced_accuracy": 0.8551922385914481,
+            "f1": 0.6785714285714286,
+            "roc_auc": 0.9338842975206613,
+            "fold": 2,
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "n_nonzero": 250
+          },
+          {
+            "accuracy": 0.9166666666666666,
+            "balanced_accuracy": 0.9328063241106719,
+            "f1": 0.7857142857142857,
+            "roc_auc": 0.9302910528206971,
+            "fold": 3,
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "n_nonzero": 250
+          },
+          {
+            "accuracy": 0.9652777777777778,
+            "balanced_accuracy": 0.9617319439453826,
+            "f1": 0.8979591836734694,
+            "roc_auc": 0.9856270212001437,
+            "fold": 4,
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "n_nonzero": 250
+          },
+          {
+            "accuracy": 0.9375,
+            "balanced_accuracy": 0.9099892202659001,
+            "f1": 0.8163265306122449,
+            "roc_auc": 0.9795185052102048,
+            "fold": 5,
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "n_nonzero": 250
+          }
+        ],
+        "mean": {
+          "accuracy": 0.9306130268199233,
+          "balanced_accuracy": 0.9236450473110551,
+          "roc_auc": 0.9604234040004791,
+          "f1": 0.8126373626373627
+        },
+        "std": {
+          "accuracy": 0.03647195583473698,
+          "balanced_accuracy": 0.04365220829362998,
+          "roc_auc": 0.026292644632479385,
+          "f1": 0.08827908232009186
+        },
+        "pooled_roc_auc": 0.9603305785123967
+      },
+      "majority_baseline": {
+        "folds": [
+          {
+            "accuracy": 0.8344827586206897,
+            "balanced_accuracy": 0.5,
+            "f1": 0.0,
+            "roc_auc": 0.5,
+            "fold": 1,
+            "majority_class": 0,
+            "training_prevalence": 0.1597222222222222
+          },
+          {
+            "accuracy": 0.8402777777777778,
+            "balanced_accuracy": 0.5,
+            "f1": 0.0,
+            "roc_auc": 0.5,
+            "fold": 2,
+            "majority_class": 0,
+            "training_prevalence": 0.1611785095320624
+          },
+          {
+            "accuracy": 0.8402777777777778,
+            "balanced_accuracy": 0.5,
+            "f1": 0.0,
+            "roc_auc": 0.5,
+            "fold": 3,
+            "majority_class": 0,
+            "training_prevalence": 0.1611785095320624
+          },
+          {
+            "accuracy": 0.8402777777777778,
+            "balanced_accuracy": 0.5,
+            "f1": 0.0,
+            "roc_auc": 0.5,
+            "fold": 4,
+            "majority_class": 0,
+            "training_prevalence": 0.1611785095320624
+          },
+          {
+            "accuracy": 0.8402777777777778,
+            "balanced_accuracy": 0.5,
+            "f1": 0.0,
+            "roc_auc": 0.5,
+            "fold": 5,
+            "majority_class": 0,
+            "training_prevalence": 0.1611785095320624
+          }
+        ],
+        "mean": {
+          "accuracy": 0.8391187739463601,
+          "balanced_accuracy": 0.5,
+          "roc_auc": 0.5,
+          "f1": 0.0
+        },
+        "std": {
+          "accuracy": 0.00259161135323252,
+          "balanced_accuracy": 0.0,
+          "roc_auc": 0.0,
+          "f1": 0.0
+        },
+        "pooled_roc_auc": 0.496551724137931
+      },
+      "elastic_net_mean_nonzero": 65.6,
+      "n_genes_nonzero_every_fold": 6,
+      "genes_nonzero_every_fold": [
+        "C9orf98",
+        "FSIP1",
+        "ESR1",
+        "CDCA7",
+        "CENPW",
+        "UGT8"
+      ]
+    },
+    "replication": {
+      "n_discovery_called": 486,
+      "n_found_in_external": 448,
+      "n_same_direction": 447,
+      "n_same_direction_and_fdr": 445,
+      "n_same_direction_and_called": 394
+    }
+  },
+  "elapsed_seconds": 71.95486226399998
 }

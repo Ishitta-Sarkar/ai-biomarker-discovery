@@ -17,6 +17,8 @@ from tnbc_biomarkers.geo import collapse_to_genes, fetch_cohort
 from tnbc_biomarkers.plots import plot_heatmap, plot_pca, plot_volcano
 from tnbc_biomarkers.qc import sample_quality, value_scale_summary
 from tnbc_biomarkers.reporting import render_results
+from tnbc_biomarkers.validation import analyse_external_cohort
+from tnbc_biomarkers.xena import fetch_tcga_brca
 
 TNBC = "TNBC"
 NON_TNBC = "non-TNBC"
@@ -53,9 +55,25 @@ def run(
             "checksums": cohort["checksums"],
             "data_processing": cohort["data_processing"],
             "annotation_date": cohort["annotation_date"],
-            "elapsed_seconds": time.perf_counter() - started,
         }
     )
+    print("Fetching TCGA-BRCA from UCSC Xena", flush=True)
+    tcga = fetch_tcga_brca(cache_dir)
+    print(
+        f"TCGA-BRCA labelled tumors with expression: {tcga['meta']['n_with_expression']}",
+        flush=True,
+    )
+    summary["external"] = analyse_external_cohort(
+        train=summary["_expression"],
+        train_groups=summary["_groups"],
+        discovery=summary["_table"],
+        external=tcga["expression"],
+        external_groups=tcga["groups"],
+        meta=tcga["meta"],
+        outdir=outdir,
+        config=config,
+    )
+    summary["elapsed_seconds"] = time.perf_counter() - started
     _write_summary(summary, outdir)
     print(render_results(summary), flush=True)
     return summary

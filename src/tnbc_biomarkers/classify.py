@@ -39,6 +39,20 @@ def select_feature_indices(x_train: np.ndarray, y_train: np.ndarray, k: int) -> 
     return order[:k]
 
 
+def classification_metrics(
+    y_true: np.ndarray,
+    scores: np.ndarray,
+    predictions: np.ndarray | None = None,
+) -> dict[str, float]:
+    """Accuracy, balanced accuracy, F1, and ROC AUC for one labelled set."""
+
+    y_true = np.asarray(y_true)
+    scores = np.asarray(scores, dtype=float)
+    if predictions is None:
+        predictions = (scores >= 0.5).astype(int)
+    return _fold_metrics(y_true, scores, np.asarray(predictions))
+
+
 def _fold_metrics(
     y_true: np.ndarray, scores: np.ndarray, predictions: np.ndarray
 ) -> dict[str, float]:

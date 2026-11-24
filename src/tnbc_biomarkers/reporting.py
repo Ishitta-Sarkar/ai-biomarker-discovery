@@ -108,6 +108,91 @@ def _term_rows(terms: list[dict], limit: int = 5) -> str:
     return "\n".join(lines) + "\n"
 
 
+def _point_metrics(label: str, block: dict) -> str:
+    return (
+        f"{label}: ROC AUC {_fmt(block['roc_auc'])}; "
+        f"balanced accuracy {_fmt(block['balanced_accuracy'])}; "
+        f"accuracy {_fmt(block['accuracy'])}; "
+        f"F1 {_fmt(block['f1'])}."
+    )
+
+
+def _external_lines(external: dict) -> list[str]:
+    transfer = external["transfer"]
+    within = external["within_batch"]
+    replication = external["replication"]
+    de = external["differential_expression"]
+    return [
+        (
+            f"External cohort: {external['cohort']} primary tumors from one UCSC Xena HiSeqV2 "
+            "RNA-seq matrix, so TNBC and non-TNBC profiles were processed together. "
+            "TNBC means ER, PR, and HER2 immunohistochemistry were all Negative. "
+            "non-TNBC means each of those three calls was Positive or Negative and at least "
+            "one was Positive. HER2 equivocal and indeterminate calls were excluded."
+        ),
+        (
+            f"After that filter, {external['n_samples_analysed']} tumors remained "
+            f"({external['n_tnbc']} TNBC and {external['n_non_tnbc']} non-TNBC) "
+            f"across {external['n_genes']} genes. "
+            f"{external['n_samples_excluded']} sample(s) failed the median pairwise correlation "
+            f"threshold of {external['correlation_threshold']:.2f} "
+            f"(retained range {_fmt(external['correlation_min'])} to "
+            f"{_fmt(external['correlation_max'])}, median {_fmt(external['correlation_median'])}). "
+            f"Expression minimum {_fmt(external['scale']['min'], 2)}, "
+            f"median {_fmt(external['scale']['median'], 2)}, "
+            f"maximum {_fmt(external['scale']['max'], 2)}."
+        ),
+        (
+            "The locked model was an elastic net trained on GSE76275. Genes and the penalty "
+            f"were chosen on GSE76275 only (top {transfer['n_features']} genes by absolute "
+            "Welch t among genes shared with TCGA-BRCA, then inner cross-validation). "
+            "Each gene was z-scored inside its own cohort before the coefficients were applied. "
+            f"Selected C was {_fmt(transfer['C'], 2)} and l1_ratio was {_fmt(transfer['l1_ratio'], 2)}, "
+            f"with {transfer['n_nonzero']} non-zero coefficients."
+        ),
+        _point_metrics("External elastic net", transfer["elastic_net"]),
+        _point_metrics(
+            "Baseline that predicts the TCGA-BRCA majority class",
+            transfer["external_majority_baseline"],
+        ),
+        _point_metrics(
+            "Baseline that predicts the GSE76275 majority class for every TCGA-BRCA tumor",
+            transfer["training_majority_baseline"],
+        ),
+        (
+            f"F1 is computed for TNBC. TNBC is {external['n_tnbc']} of "
+            f"{external['n_samples_analysed']} external tumors, so a probability cut of 0.5, "
+            "kept from training and not re-fit on TCGA-BRCA, is a different operating point "
+            "from the discovery cohort. ROC AUC does not use that cut."
+        ),
+        (
+            "Nested cross-validation inside TCGA-BRCA, using the same folds, feature count, "
+            "and grids as the discovery classifier:"
+        ),
+        _metric_sentence("TCGA-BRCA elastic net", within["elastic_net"]),
+        _metric_sentence("TCGA-BRCA L2 logistic regression", within["l2_logistic"]),
+        _metric_sentence("TCGA-BRCA majority-class baseline", within["majority_baseline"]),
+        _hyperparameter_sentence(within),
+        (
+            f"TCGA-BRCA differential expression called {de['n_significant']} genes at "
+            f"FDR <= {de['fdr_threshold']} and absolute log2 fold change >= {de['log2fc_threshold']} "
+            f"({de['n_higher_in_tnbc']} higher in TNBC and {de['n_higher_in_non_tnbc']} higher in "
+            f"non-TNBC). {de['n_fdr_only']} genes had FDR <= {de['fdr_threshold']} with no "
+            "fold-change filter."
+        ),
+        (
+            f"Of {replication['n_discovery_called']} genes called in GSE76275, "
+            f"{replication['n_found_in_external']} were measured in TCGA-BRCA. "
+            f"{replication['n_same_direction']} had the same log2 fold-change sign. "
+            f"{replication['n_same_direction_and_fdr']} had the same sign and FDR <= "
+            f"{de['fdr_threshold']}. "
+            f"{replication['n_same_direction_and_called']} had the same sign and also met the "
+            f"absolute log2 fold-change threshold of {de['log2fc_threshold']}."
+        ),
+        "",
+    ]
+
+
 def render_results(summary: dict) -> str:
     """Render the results section from ``summary`` produced by one run."""
 
@@ -116,7 +201,14 @@ def render_results(summary: dict) -> str:
     models = summary["classification"]
     enrichment = summary["enrichment"]
     scale = qc["scale"]
+    external_lines = _external_lines(summary["external"]) if "external" in summary else []
     lines = [
+        *external_lines,
+        (
+            "GSE76275 internal analysis. The TNBC label in this cohort is identical to "
+            "subseries membership, and the two series matrices were normalised separately, "
+            "so classifier scores below are confounded with batch."
+        ),
         f"The run used GEO {summary['accession']} ({', '.join(summary['subseries'])}) on {summary['platform']}.",
         (
             f"After probe filtering and gene collapse, {de['n_genes_tested']} genes were tested in "
@@ -149,6 +241,8 @@ def render_results(summary: dict) -> str:
         ),
         _leading_gene_table(de["leading_genes"]),
         (
+            "Internal GSE76275 nested cross-validation. These scores are confounded with batch: "
+            "the label equals the subseries, and the matrices were normalised separately. "
             "Classifier metrics use TNBC as the positive class. "
             "Feature selection and tuning were nested: each outer training fold ranked genes by the "
             f"absolute Welch t statistic, kept {models['n_features']} genes, and chose hyperparameters "

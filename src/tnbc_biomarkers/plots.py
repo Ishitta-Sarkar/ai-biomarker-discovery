@@ -13,6 +13,7 @@ import pandas as pd
 import seaborn as sns
 from matplotlib.patches import Patch
 from sklearn.decomposition import PCA
+from sklearn.metrics import roc_auc_score, roc_curve
 from sklearn.preprocessing import StandardScaler
 
 TNBC_COLOR = "#b2182b"
@@ -80,6 +81,33 @@ def plot_pca(
         "pc2_variance_fraction": float(variance[1]) if components > 1 else 0.0,
         "n_genes": int(len(chosen)),
     }
+
+
+def plot_roc(
+    y_true: np.ndarray,
+    scores: np.ndarray,
+    path: Path,
+    title: str,
+) -> float:
+    """ROC curve for an external or held-out score. Returns the ROC AUC."""
+
+    _style()
+    fpr, tpr, _ = roc_curve(y_true, scores)
+    auc = float(roc_auc_score(y_true, scores))
+    fig, ax = plt.subplots(figsize=(5.8, 5.4))
+    ax.plot(fpr, tpr, color=TNBC_COLOR, linewidth=1.8, label=f"Elastic net (AUC {auc:.3f})")
+    ax.plot([0, 1], [0, 1], color="#737373", linestyle="--", linewidth=0.8, label="Chance")
+    ax.set_xlabel("False positive rate")
+    ax.set_ylabel("True positive rate")
+    ax.set_title(title)
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.legend(frameon=False, loc="lower right")
+    fig.tight_layout()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(path, dpi=160, bbox_inches="tight")
+    plt.close(fig)
+    return auc
 
 
 def plot_volcano(

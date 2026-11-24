@@ -9,7 +9,7 @@ authors:
 repository-code: https://github.com/Ishitta-Sarkar/ai-biomarker-discovery
 url: https://github.com/Ishitta-Sarkar/ai-biomarker-discovery
 license: MIT
-version: 1.0.0
+version: 1.1.0
 date-released: 2026-11-24
 keywords:
   - gene-expression
