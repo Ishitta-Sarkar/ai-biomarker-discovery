@@ -1,0 +1,18 @@
+!Series_geo_accession	"GSE00001"
+!Series_platform_id	"GPL570"
+!Series_relation	"SubSeries of: GSE76275"
+!Sample_title	"A"	"B"	"C"
+!Sample_geo_accession	"GSM1"	"GSM2"	"GSM3"
+!Sample_data_processing	"RMA"	"RMA"	"RMA"
+!Sample_characteristics_ch1	"tissue: Breast cancer"	"age (years): 40"	"tissue: Breast cancer"
+!Sample_characteristics_ch1	"triple-negative status: TN"	"triple-negative status: not TN"	"er: Negative"
+!Sample_characteristics_ch1	"er: Negative"	"gender: Female"	"pr: Negative"
+!Sample_characteristics_ch1	"pr: Negative"	"er: Positive"	"her2: Negative"
+!Sample_characteristics_ch1	"her2: Negative"	"pr: Positive"	"triple-negative status: TN"
+!series_matrix_table_begin
+ID_REF	GSM1	GSM2	GSM3
+1007_s_at	1.5	2.5	3.5
+AFFX-BioB	9	9	9
+1053_at	4	5	6
+2000_at	7	8	9
+!series_matrix_table_end

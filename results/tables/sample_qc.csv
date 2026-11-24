@@ -1,0 +1,266 @@
+sample_id,title,series,group,tn_status_raw,er,pr,her2,receptor_group,data_processing,median_expression,iqr,median_correlation,pass_correlation
+GSM1974566,S1-H10,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.883425925499999,2.9059795354999984,0.9248321424602517,True
+GSM1974567,S1-H14,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.791540873000001,3.0592530712500006,0.907336271823643,True
+GSM1974568,S1-H19,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.804101835499999,2.7977616969999994,0.8875880185849596,True
+GSM1974569,S1-H20B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8444000339999995,2.9412177452499995,0.9088500360254,True
+GSM1974570,S1-H22,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.849793704,2.754478098250001,0.9238606742212359,True
+GSM1974571,S1-H27,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.856543781,2.814418020249999,0.9278533331707361,True
+GSM1974572,S1-H28,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.829785437,2.7084638419999996,0.9096522900005167,True
+GSM1974573,S1-H29,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.841256618,2.818544859500001,0.9099320957950686,True
+GSM1974574,S1-H2B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8190592415,2.970479741,0.9259555594162445,True
+GSM1974575,S1-H31,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.846577478,2.9415581412500007,0.9058005660676194,True
+GSM1974576,S1-H35B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.920093577499999,3.116510257,0.9132600957891772,True
+GSM1974577,S1-H36,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8298805935,2.92945776975,0.9111797753086186,True
+GSM1974578,S1-H38,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.886085562,2.922899868000001,0.9252216728055735,True
+GSM1974579,S1-H3B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8361507715,2.999010569000001,0.9021661220353581,True
+GSM1974580,S1-H40,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8666678375,2.780382618000001,0.9189635191695892,True
+GSM1974581,S1-H41,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8726256674999995,2.804463514750001,0.9107039557756986,True
+GSM1974582,S1-H43,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.912429864,3.074141213,0.9253035421817056,True
+GSM1974583,S1-H44,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.953664059499999,2.868095340250001,0.9273777922105677,True
+GSM1974584,S1-H45,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.764988473,3.0569049127500003,0.876395346525351,True
+GSM1974585,S1-H46,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.837708951,2.816135716,0.9156086115210781,True
+GSM1974586,S1-H47,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8867436685,2.9768908092500004,0.9213442811767734,True
+GSM1974587,S1-H48,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.92139315,3.051146105249999,0.9135941357550115,True
+GSM1974588,S1-H49,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.874267446499999,2.7949660737500004,0.9216651978122832,True
+GSM1974589,S1-H4B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.939642829,3.112885757,0.922342922572718,True
+GSM1974590,S1-H50,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8631664855,2.822031160249999,0.9107985360584929,True
+GSM1974591,S1-H51,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.892408801,3.047381347749999,0.9207781951834337,True
+GSM1974592,S1-H52,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8734570285,2.8132100795,0.9095566218709403,True
+GSM1974593,S1-H53,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.860070696,2.977202924000001,0.9064667134885863,True
+GSM1974594,S1-H58B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8555765545,3.06771353075,0.9095761733968066,True
+GSM1974595,S1-H59,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.895578578,2.868802187999999,0.9168128574695464,True
+GSM1974596,S1-H6,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8116098955,2.909702790500001,0.9061672131812806,True
+GSM1974597,S1-H60,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8858061655,2.959470588000001,0.908085614399033,True
+GSM1974598,S1-H61,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.809565893,2.8433735107499984,0.8931606854719638,True
+GSM1974599,S1-H62,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.901738507499999,3.0271050385000002,0.9204773585996788,True
+GSM1974600,S1-H63,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.931591365,3.0804090787500007,0.9257427379187012,True
+GSM1974601,S1-H64,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.906118373,2.9836968122500007,0.9223314408066292,True
+GSM1974602,S1-H65,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.938588281,3.0173084565000003,0.9238831736191162,True
+GSM1974603,S1-H66,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8937822109999995,3.03356793625,0.9253617397224125,True
+GSM1974604,S1-H67,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.857449056,2.925949461500001,0.9122178936901402,True
+GSM1974605,S1-H68,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7028205975,3.1582305664999986,0.8557572485166767,True
+GSM1974606,S1-H69,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.9352017355,3.036547038000002,0.9211572544078164,True
+GSM1974607,S1-H7,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.810485371,2.9492522635,0.9064649941501395,True
+GSM1974608,S1-H70,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8445045475,2.7555398584999997,0.9122528642977521,True
+GSM1974609,S1-H71,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8560718314999995,3.0608146987500007,0.9251107379976093,True
+GSM1974610,S1-H72B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8152498050000005,3.0150619687499995,0.9100535955372939,True
+GSM1974611,S1-H73,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.863623204,3.11624895025,0.9199740744030898,True
+GSM1974612,S1-H8,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.857144779,2.88452155175,0.9275871672863343,True
+GSM1974613,S1-H9,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.782669144,2.8985329542499993,0.9053195597618275,True
+GSM1974614,S2-H54B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8488070605,2.820356716500001,0.8987952764620688,True
+GSM1974615,S2-H55B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.846045749,2.794712488500001,0.897479301665151,True
+GSM1974616,S2-H56B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8194686954999995,2.93305761375,0.8668759688817529,True
+GSM1974617,S2-H57C,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8809582895000005,2.7319903512499994,0.9158655813895622,True
+GSM1974618,S2-H76,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8144162625,3.0540860535000007,0.8962376358930031,True
+GSM1974619,S2-H77,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.794319786,3.0103647667499995,0.9039144575168846,True
+GSM1974620,S2-H78,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8045993320000004,2.8369050750000016,0.907393922020536,True
+GSM1974621,S2-H79,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.752571404499999,2.6574204690000007,0.8983733662935265,True
+GSM1974622,S2-H80,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.773076334500001,2.9102687407499985,0.902970910354765,True
+GSM1974623,S2-H81,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8301360634999995,2.871434282750001,0.922368966219115,True
+GSM1974624,S2-H82,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8054936315,3.0757808212499977,0.9148887995937187,True
+GSM1974625,S2-H83,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8335623915,3.093870473499999,0.9042558634838473,True
+GSM1974626,S2-H84,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8722086529999995,3.04094101875,0.9039859374160515,True
+GSM1974627,S2-H85B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8712520115,2.7518138755000017,0.9175195696112468,True
+GSM1974628,S2-H88,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8828768545,3.081782671250001,0.9103994197554182,True
+GSM1974629,S2-H89,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.9565194505,3.06232762425,0.9154785861423382,True
+GSM1974630,S2-H90,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.914197982499999,3.1071206930000006,0.9157363591294666,True
+GSM1974631,S2-H91B,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8653460294999995,2.946358985249999,0.9088448530356574,True
+GSM1974632,S3-H100,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8464789955,2.804865954250001,0.9094613751737406,True
+GSM1974633,S3-H102,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8293768965,2.990924110999998,0.9053361841002431,True
+GSM1974634,S3-H103,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.850420956000001,3.0957445317500003,0.9122646989669273,True
+GSM1974635,S3-H104,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7698318115,2.8239965804999994,0.8885466572151139,True
+GSM1974636,S3-H105,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.783096474,3.0456361032500006,0.8988648405892244,True
+GSM1974637,S3-H106,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.733843402,2.8567400684999997,0.8866790295603153,True
+GSM1974638,S3-H107,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.861218923,2.8878475527500003,0.926519289054428,True
+GSM1974639,S3-H108,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8078915564999996,2.8232128447499996,0.9173033979511069,True
+GSM1974640,S3-H109,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7884154405,2.6575619127500003,0.9092670612334193,True
+GSM1974641,S3-H110,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.795388805,2.6800398725,0.9079894341983024,True
+GSM1974642,S3-H111,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7836876125,2.8603254320000007,0.9099065338634547,True
+GSM1974643,S3-H113,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8756807885,2.8970916325000013,0.9283779741952591,True
+GSM1974644,S3-H114,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.822484680500001,2.69359177725,0.9069327451959139,True
+GSM1974645,S3-H115,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8452550715000005,3.0366067062499997,0.9114401242449919,True
+GSM1974646,S3-H116,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.826678546,2.7039711155,0.9030360909958123,True
+GSM1974647,S3-H117,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.768314387,2.9187165137499997,0.9036393379475298,True
+GSM1974648,S3-H118,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.874760713000001,2.9547867944999986,0.923566132822913,True
+GSM1974649,S3-H119,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.793185354,2.9851463552500013,0.8874267352656691,True
+GSM1974650,S3-H120,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.833091575999999,2.986485428999999,0.9070087592219662,True
+GSM1974651,S3-H121,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.811936567,2.927949004000001,0.9058672699822149,True
+GSM1974652,S3-H122,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7925272145,2.957158165,0.9119913638829841,True
+GSM1974653,S3-H123,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.789302962000001,2.9657739447499996,0.916628721604595,True
+GSM1974654,S3-H124,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7363123585,2.849918376249999,0.9132252861763508,True
+GSM1974655,S3-H125,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.805102457,2.9567666812499995,0.9200926460937973,True
+GSM1974656,S3-H126,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.752385111000001,2.8402238085000002,0.902408721810231,True
+GSM1974657,S3-H127,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.76843573,2.595928227499999,0.9077117275709695,True
+GSM1974658,S3-H128,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7860139205,2.682495998750001,0.9187877726260465,True
+GSM1974659,S3-H129,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.790753922,2.9668563902499994,0.9128785919823555,True
+GSM1974660,S3-H130,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.768926801,2.752126563500001,0.8903410956966873,True
+GSM1974661,S3-H131,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.768613208,2.6746958147499997,0.8821075611469598,True
+GSM1974662,S3-H132,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7705342779999995,3.014843646750001,0.8989189008528535,True
+GSM1974663,S3-H133,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.944238137999999,2.9700375149999996,0.90624016723973,True
+GSM1974664,S3-H134,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.781041785,2.92076916325,0.9046764086059502,True
+GSM1974665,S3-H135,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.946512727,2.8860710137500005,0.9121282800004871,True
+GSM1974666,S3-H136,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",8.0200961275,3.0464974294999996,0.9250798728146122,True
+GSM1974667,S3-H137,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.925868368,2.966238433,0.9115946360739722,True
+GSM1974668,S3-H138,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.809767891,2.9946542000000003,0.9234207598241451,True
+GSM1974669,S3-H139,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7124609915,2.9689125612500007,0.901588834970486,True
+GSM1974670,S3-H140,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.715798921999999,2.94021174675,0.9024842536623081,True
+GSM1974671,S3-H141,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.761838073,2.9011737275000007,0.9053505633413206,True
+GSM1974672,S3-H142,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7681128095,3.004536086250001,0.9158604388427792,True
+GSM1974673,S3-H143,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.555383658,3.0680870892499996,0.9153907678208908,True
+GSM1974674,S3-H144,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.524322676,2.9479358842499988,0.9098049805690382,True
+GSM1974675,S3-H145,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.58020858,2.8309991065,0.9226289362424602,True
+GSM1974676,S3-H146,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5623221055,2.8349504629999993,0.8907729106749784,True
+GSM1974677,S3-H147,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5511212145,2.8721720040000003,0.9160747250835846,True
+GSM1974678,S3-H148,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.564008077,2.9282454059999994,0.916185473502065,True
+GSM1974679,S3-H149,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.561804076,3.08544456225,0.9073056176452734,True
+GSM1974680,S3-H150,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.62905417,3.048444162000001,0.9109135668871972,True
+GSM1974681,S3-H151,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.596539152,3.1510902087499995,0.9062446928572623,True
+GSM1974682,S3-H152,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.605682472,3.00041870125,0.919327370345989,True
+GSM1974683,S3-H153,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.577728293,3.124896957249998,0.9105912816776693,True
+GSM1974684,S3-H154,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.613386792,2.9702210650000005,0.9266670823725975,True
+GSM1974685,S3-H155,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5477351825,2.91371547425,0.9213705610541763,True
+GSM1974686,S3-H156,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5393679885000005,2.753678925250001,0.9082483786652098,True
+GSM1974687,S3-H157,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5851471870000005,2.9078989692499997,0.9211136572817854,True
+GSM1974688,S3-H158,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5896518375,3.061450526,0.915162168886914,True
+GSM1974689,S3-H159,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.494517433,3.0315047670000013,0.902321109445553,True
+GSM1974690,S3-H160,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.606090163,3.089114436000001,0.917562295409677,True
+GSM1974691,S3-H161,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6113560425,3.0027769912499984,0.9239929977589767,True
+GSM1974692,S3-H162,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5841313315,2.930496755750002,0.9165780729385197,True
+GSM1974693,S3-H163,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5067418660000005,2.9782628652499987,0.9004396337590961,True
+GSM1974694,S3-H164,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5629377385000005,2.7028232389999998,0.8765026664715599,True
+GSM1974695,S3-H165,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.560524747500001,2.962481297750001,0.9109009907308143,True
+GSM1974696,S3-H166,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.589421445999999,3.0340834334999984,0.9153471619147884,True
+GSM1974697,S3-H167,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.585308559,2.8916085469999997,0.9150085302198794,True
+GSM1974698,S3-H168,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5723109609999995,3.055909368749999,0.9104965161473711,True
+GSM1974699,S3-H170,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.616972694,2.96826453175,0.9265591316052223,True
+GSM1974700,S3-H171,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.614156971,2.9683683847500006,0.9209579224758006,True
+GSM1974701,S3-H172,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.622862975,3.064181111,0.9047403273435419,True
+GSM1974702,S3-H173,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.61674415,3.1037899489999994,0.8991692355625776,True
+GSM1974703,S3-H174,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6106317115,2.865971427749999,0.9203400938198953,True
+GSM1974704,S3-H175,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.610927151,3.0076463677499987,0.9153942466686571,True
+GSM1974705,S3-H176,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5875879390000005,3.15401219525,0.9002205037931391,True
+GSM1974706,S3-H177,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6875386685,3.1695914297500014,0.9204962693667198,True
+GSM1974707,S3-H178,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5937519115,3.116837595749999,0.9074619334644639,True
+GSM1974708,S3-H179,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.605715237,3.10100926625,0.9192479133707538,True
+GSM1974709,S3-H180,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.523202769,2.9794459297499998,0.8926818331469157,True
+GSM1974710,S3-H181,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6042576385,3.14450629425,0.9141688342184142,True
+GSM1974711,S3-H182,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.53917501,3.0585886987499995,0.9066247686847319,True
+GSM1974712,S3-H183,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6255836805,3.12699796125,0.9247022803834355,True
+GSM1974713,S3-H184,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6201378885,2.999130119000001,0.9262628428471834,True
+GSM1974714,S3-H185,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.585748117,2.8673381440000005,0.9021787520829536,True
+GSM1974715,S3-H186,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.582246931,2.6265440267500004,0.916939173293452,True
+GSM1974716,S3-H187,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6431814485,2.7553685975000004,0.901388667513253,True
+GSM1974717,S3-H188,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5368191435,2.48442557275,0.9032521397795226,True
+GSM1974718,S3-H189,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6006797944999995,2.9580019270000006,0.9212551082346563,True
+GSM1974719,S3-H190,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.513401009500001,2.8085282135,0.891939887650778,True
+GSM1974720,S3-H191,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.610879627999999,2.9201174057499992,0.9060760717292432,True
+GSM1974721,S3-H193,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5645508674999995,2.9635771815000016,0.9019946014084812,True
+GSM1974722,S3-H194,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.582458749000001,2.700744447750001,0.8927556678470896,True
+GSM1974723,S3-H196,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.509603027500001,2.686840804,0.860546823954482,True
+GSM1974724,S3-H197,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.563050004,2.9762768709999996,0.8986570420623774,True
+GSM1974725,S3-H198,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7113179975,2.9114683704999997,0.9299695369565063,True
+GSM1974726,S3-H199,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.634212752,2.7861201740000006,0.897079617421263,True
+GSM1974727,S3-H200,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5854076435,3.0501874085000003,0.9011060139962892,True
+GSM1974728,S3-H201,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.597070063,3.0988368604999996,0.9205007760688775,True
+GSM1974729,S3-H202,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.612294461499999,2.9951805777500002,0.9202037273788709,True
+GSM1974730,S3-H203,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.609265350499999,2.969157190999999,0.9224440951821298,True
+GSM1974731,S3-H204,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6385522255,3.0734663632500014,0.9142830953427719,True
+GSM1974732,S3-H205,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.632505735,3.2416581267500018,0.9091258034665619,True
+GSM1974733,S3-H206,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8601803310000005,3.0013821797499993,0.9187169479239656,True
+GSM1974734,S3-H207,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.795520054000001,3.0921188630000005,0.9174180696180625,True
+GSM1974735,S3-H208,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.751045633,3.0363064772499992,0.917436980524378,True
+GSM1974736,S3-H209,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.622280393,2.9730993532500003,0.8909463489491966,True
+GSM1974737,S3-H210,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6679003625,3.1750098485000002,0.9037610283825415,True
+GSM1974738,S3-H211,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.769262625,3.1546317240000015,0.9172534283893239,True
+GSM1974739,S3-H212,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5658146275,2.7820633784999993,0.9099483595754965,True
+GSM1974740,S3-H213,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6186573995,3.0069983222499994,0.912039851628458,True
+GSM1974741,S3-H214,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6077893665000005,2.7324413535000005,0.9175910142518012,True
+GSM1974742,S3-H215,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.581311891,2.927008423000001,0.9153105307940842,True
+GSM1974743,S3-H216,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6291793895,3.0689399984999977,0.9081770965177031,True
+GSM1974744,S3-H217,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.662034238,3.036279781,0.9268079652412536,True
+GSM1974745,S3-H218,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5954904565,2.8635583252500005,0.91711773850077,True
+GSM1974746,S3-H219,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.612407192,2.9594716207499996,0.9187046896448798,True
+GSM1974747,S3-H220,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6016721149999995,2.9805110712500005,0.9051592934325614,True
+GSM1974748,S3-H221,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.561738011,2.81095060175,0.9078550189580875,True
+GSM1974749,S3-H222,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.629834801,2.8887583354999995,0.926585370068022,True
+GSM1974750,S3-H224,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.566812982,2.6700040867500006,0.9126678748754439,True
+GSM1974751,S3-H225,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.702476574,2.996948925250001,0.910268254336174,True
+GSM1974752,S3-H226,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7698815655,3.014381878500001,0.9207157620383104,True
+GSM1974753,S3-H227,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.697457957999999,3.007072481249999,0.898957174226765,True
+GSM1974754,S3-H228,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.581615162,3.100797856,0.9061971923446632,True
+GSM1974755,S3-H229,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6106008329999995,3.0516559757499993,0.910054865913811,True
+GSM1974756,S3-H230,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.618646138,2.918512357750001,0.9267891609815192,True
+GSM1974757,S3-H93C,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8831541765,2.9949528457500003,0.9282910500532351,True
+GSM1974758,S3-H94C,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7583696175,3.129687912749999,0.9123518059493692,True
+GSM1974759,S3-H95C,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.709596300499999,3.0371135417499993,0.8903758271553924,True
+GSM1974760,S3-H96C,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.707047264,3.172776024499999,0.8850762508380928,True
+GSM1974761,S3-H97C,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.792403123,3.064281329,0.9019260714803967,True
+GSM1974762,S3-H98C,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.769053249,3.149685432,0.8948657284048558,True
+GSM1974763,S3-H99C,GSE76124,TNBC,TN,Negative,Negative,Negative,TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7736057215,3.0853698327499997,0.9001536737203337,True
+GSM1978883,S1-H11,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.807150550499999,3.133240343749999,0.9234800680973576,True
+GSM1978884,S1-H12,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7589100245000004,3.0538656500000005,0.9072216868597822,True
+GSM1978885,S1-H13,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.781098262,3.1228243735000003,0.9099168572245816,True
+GSM1978886,S1-H15,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.723662557,2.9250942692500015,0.9036081676552545,True
+GSM1978887,S1-H16,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6811757714999995,2.7855924885,0.9156319652648235,True
+GSM1978888,S1-H17,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.733421187499999,2.8736468965000004,0.9217282060923562,True
+GSM1978889,S1-H18,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7776461735,3.094050673499999,0.9156383668726037,True
+GSM1978890,S1-H1B,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6719058345,3.1968404897499987,0.9002326313059237,True
+GSM1978891,S1-H21,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.722351157,2.7396173790000002,0.9069449933311978,True
+GSM1978892,S1-H23,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.736230831,2.9720955779999993,0.9189056395040263,True
+GSM1978893,S1-H25,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6504805825,2.8977408779999996,0.8804928609591187,True
+GSM1978894,S1-H30,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7931286945,3.0965061904999995,0.913320829921348,True
+GSM1978895,S1-H32,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.805528208,2.946910385499999,0.9247798802539964,True
+GSM1978896,S1-H37,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.812039663,3.1554794932500005,0.9075323794036323,True
+GSM1978897,S1-H39,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7579216145,3.2036265505,0.922233603539865,True
+GSM1978898,S1-H42,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7589968065,2.9506916832499996,0.924099533869833,True
+GSM1978899,S1-H5,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.734951604,3.0731403642500004,0.9115052839584483,True
+GSM1978900,S3-H195,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.7219442775000005,2.5508785385,0.903123393943536,True
+GSM1978901,S3-H223,GSE76274,non-TNBC,not TN,Negative,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.657384177,2.8961383974999997,0.9157101522571143,True
+GSM1978902,S4-H231,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.617882871,2.737478213500001,0.8989279072618315,True
+GSM1978903,S4-H232,GSE76274,non-TNBC,not TN,Positive,Negative,,,"The data were analyzed with  Affy package in R, RMA method",7.623285419,2.7433456874999997,0.8910869816290011,True
+GSM1978904,S4-H233,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.5988458645,2.7782578620000002,0.8904737854920983,True
+GSM1978905,S4-H234,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5581403045,2.9166652172499994,0.8927892493912033,True
+GSM1978906,S4-H235,GSE76274,non-TNBC,not TN,Positive,Negative,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6965882865,2.976673840250001,0.9111074182836951,True
+GSM1978907,S4-H236,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7060930805,3.0728399800000012,0.9170177092479751,True
+GSM1978908,S4-H237,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.750401828499999,3.052211231000001,0.913662690121988,True
+GSM1978909,S4-H238,GSE76274,non-TNBC,not TN,Positive,Positive,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.672471353000001,3.0566364082499993,0.8973603395328347,True
+GSM1978910,S4-H239,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.726542564,3.147506272750001,0.9150688882072988,True
+GSM1978911,S4-H240,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.696588047500001,3.0142397165000006,0.9099780892601905,True
+GSM1978912,S4-H241,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7016237555,3.0798099617499997,0.9019205718804819,True
+GSM1978913,S4-H242,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.705791206,3.0123702667500005,0.9154663420121842,True
+GSM1978914,S4-H243,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.719807318,3.06581654725,0.9208798895117429,True
+GSM1978915,S4-H244,GSE76274,non-TNBC,not TN,Positive,Negative,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6972884535,2.9595066215,0.9165539274506256,True
+GSM1978916,S4-H245,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.608327382000001,2.4168666255,0.8977563009446814,True
+GSM1978917,S4-H246,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.5615695689999995,2.34566324425,0.8861895925370908,True
+GSM1978918,S4-H247,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6695692445,2.9714377317499983,0.9101703254340272,True
+GSM1978919,S4-H248,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.710146812,2.9894236165000008,0.9161610314300156,True
+GSM1978920,S4-H249,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.7223578275,3.0558750245000006,0.9136245543961492,True
+GSM1978921,S4-H250,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.704874847,2.8835389869999997,0.9172104871734694,True
+GSM1978922,S4-H251,GSE76274,non-TNBC,not TN,Positive,Negative,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.662736711999999,2.9901865525,0.8883440434111876,True
+GSM1978923,S4-H252,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.7642220075,2.9796295409999995,0.918900866413066,True
+GSM1978924,S4-H253,GSE76274,non-TNBC,not TN,Positive,Negative,,,"The data were analyzed with  Affy package in R, RMA method",7.6763062315,2.900238904250001,0.8927552827358336,True
+GSM1978925,S4-H254,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.760580873,3.0651472845,0.9241020380776629,True
+GSM1978926,S4-H255,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.7501836345,3.0260100572500006,0.9173648119093436,True
+GSM1978927,S4-H256,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.667616927,2.9373950792500008,0.9094388613575844,True
+GSM1978928,S4-H257,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.842649744,3.13689554775,0.888582973833483,True
+GSM1978929,S4-H258,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8507177805,3.0857599345000004,0.9152687164968389,True
+GSM1978930,S4-H259,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.719868557,3.0506589345000013,0.9077160470114842,True
+GSM1978931,S4-H261,GSE76274,non-TNBC,not TN,Positive,Negative,,,"The data were analyzed with  Affy package in R, RMA method",7.643467809000001,2.880302082500001,0.9188256061461062,True
+GSM1978932,S4-H262,GSE76274,non-TNBC,not TN,Positive,Positive,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.670117184,2.6247958340000004,0.8900172775689708,True
+GSM1978933,S4-H263,GSE76274,non-TNBC,not TN,Positive,Negative,,,"The data were analyzed with  Affy package in R, RMA method",7.7360724,3.1268177127499994,0.9081609031386115,True
+GSM1978934,S4-H264,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7250760015,2.9579919429999997,0.9182565528980859,True
+GSM1978935,S4-H265,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6827575625,2.7997151415,0.9018673333230498,True
+GSM1978936,S4-H266,GSE76274,non-TNBC,not TN,Positive,Positive,Positive,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7002612804999995,2.8369856915,0.9099637666941285,True
+GSM1978937,S4-H267,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.671530456999999,2.9573398117500007,0.908706032317703,True
+GSM1978938,S4-H268,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7170814945,2.962258357749999,0.911798584800055,True
+GSM1978939,S4-H269,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.6061655495,2.526772347749999,0.8873952071996111,True
+GSM1978940,S4-H270,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.6672267755,2.6358699635000002,0.9099351061283214,True
+GSM1978941,S4-H271,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.649344161,2.5526655807499994,0.9094490002682007,True
+GSM1978942,S4-H272,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.60924138,2.6160511177499997,0.878959815101201,True
+GSM1978943,S4-H273,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7163227865,2.8442960287499996,0.9212214262378744,True
+GSM1978944,S4-H274,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.611488701,2.887764794749999,0.8750081240208483,True
+GSM1978945,S4-H275,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.8770261285,2.879963130750001,0.9099671572142525,True
+GSM1978946,S4-H276,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.878644792,2.842088071500001,0.9166209182529619,True
+GSM1978947,S4-H278,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.7124667235,2.6903680729999992,0.9179032238939699,True
+GSM1978948,S4-H279,GSE76274,non-TNBC,not TN,Positive,Positive,,,"The data were analyzed with  Affy package in R, RMA method",7.824147735,3.085246112750001,0.8823232073964765,True
+GSM1978949,S4-H280,GSE76274,non-TNBC,not TN,Positive,Positive,Negative,non-TNBC,"The data were analyzed with  Affy package in R, RMA method",7.900093473,3.0953446734999988,0.9222976731858665,True

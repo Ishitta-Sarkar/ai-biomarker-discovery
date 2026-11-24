@@ -1,0 +1,1052 @@
+{
+  "qc": {
+    "n_samples_downloaded": 265,
+    "n_unlabelled": 0,
+    "n_samples_excluded": 0,
+    "n_samples_analysed": 265,
+    "n_tnbc": 198,
+    "n_non_tnbc": 67,
+    "correlation_threshold": 0.8,
+    "correlation_min": 0.8557572485166767,
+    "correlation_median": 0.9107039557756986,
+    "correlation_max": 0.9299695369565063,
+    "scale": {
+      "min": 3.426749339,
+      "median": 7.7293116925,
+      "max": 15.61709607,
+      "assumed_log2": true
+    },
+    "probe_counts": {
+      "n_probes": 54675,
+      "n_control_probes_removed": 62,
+      "n_unmapped_or_ambiguous_probes": 11719,
+      "n_ambiguous_symbol_probes": 2214,
+      "n_probes_with_missing_values": 0,
+      "n_genes": 20848
+    },
+    "pca": {
+      "pc1_variance_fraction": 0.19476818763596312,
+      "pc2_variance_fraction": 0.11298531396736956,
+      "n_genes": 2000
+    },
+    "receptor_concordance": 1.0,
+    "n_receptor_complete": 248,
+    "group_by_series": {
+      "GSE76124": {
+        "TNBC": 198,
+        "non-TNBC": 0
+      },
+      "GSE76274": {
+        "TNBC": 0,
+        "non-TNBC": 67
+      }
+    },
+    "raw_tn_status_counts": {
+      "TN": 198,
+      "not TN": 67
+    }
+  },
+  "differential_expression": {
+    "n_genes_tested": 20848,
+    "fdr_threshold": 0.05,
+    "log2fc_threshold": 1.0,
+    "n_fdr_only": 12897,
+    "n_significant": 486,
+    "n_higher_in_tnbc": 188,
+    "n_higher_in_non_tnbc": 298,
+    "median_welch_df": 126.49841077345297,
+    "top_gene": {
+      "gene": "FZD9",
+      "probe_id": "207639_at",
+      "log2_fold_change": 1.5517563185810337,
+      "fdr": 5.290506962987926e-71,
+      "higher_in": "TNBC"
+    },
+    "leading_genes": [
+      {
+        "gene": "FZD9",
+        "probe_id": "207639_at",
+        "log2_fold_change": 1.5517563185810337,
+        "fdr": 5.290506962987926e-71,
+        "higher_in": "TNBC",
+        "significant": true
+      },
+      {
+        "gene": "COL18A1-AS1",
+        "probe_id": "1564017_at",
+        "log2_fold_change": -1.0145437623467473,
+        "fdr": 1.1366655037931697e-68,
+        "higher_in": "non-TNBC",
+        "significant": true
+      },
+      {
+        "gene": "SKA1",
+        "probe_id": "217640_x_at",
+        "log2_fold_change": 1.1659566148243616,
+        "fdr": 9.298324175772904e-64,
+        "higher_in": "TNBC",
+        "significant": true
+      },
+      {
+        "gene": "MIR924HG",
+        "probe_id": "240365_at",
+        "log2_fold_change": 0.619511705730365,
+        "fdr": 3.9976382253097205e-54,
+        "higher_in": "TNBC",
+        "significant": false
+      },
+      {
+        "gene": "GTSE1",
+        "probe_id": "211040_x_at",
+        "log2_fold_change": 1.0944217092778477,
+        "fdr": 1.6836989133365354e-53,
+        "higher_in": "TNBC",
+        "significant": true
+      },
+      {
+        "gene": "ORC1",
+        "probe_id": "205085_at",
+        "log2_fold_change": 1.2968323673588076,
+        "fdr": 6.258487225772918e-52,
+        "higher_in": "TNBC",
+        "significant": true
+      },
+      {
+        "gene": "EN1",
+        "probe_id": "220559_at",
+        "log2_fold_change": 2.455942115803934,
+        "fdr": 6.258487225772918e-52,
+        "higher_in": "TNBC",
+        "significant": true
+      },
+      {
+        "gene": "DBF4B",
+        "probe_id": "238508_at",
+        "log2_fold_change": 1.0578087528434343,
+        "fdr": 1.5178592174393512e-49,
+        "higher_in": "TNBC",
+        "significant": true
+      }
+    ]
+  },
+  "classification": {
+    "positive_class": "TNBC",
+    "n_samples": 265,
+    "n_tnbc": 198,
+    "n_non_tnbc": 67,
+    "outer_splits": 5,
+    "inner_splits": 5,
+    "n_features": 250,
+    "cs": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "l1_ratios": [
+      0.15,
+      0.5,
+      0.85
+    ],
+    "random_state": 42,
+    "convergence_warnings": 0,
+    "class_weight": "balanced",
+    "decision_threshold": 0.5,
+    "elastic_net": {
+      "folds": [
+        {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "fold": 1,
+          "C": 0.01,
+          "l1_ratio": 0.15,
+          "n_nonzero": 127
+        },
+        {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "fold": 2,
+          "C": 0.01,
+          "l1_ratio": 0.15,
+          "n_nonzero": 130
+        },
+        {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "fold": 3,
+          "C": 0.01,
+          "l1_ratio": 0.15,
+          "n_nonzero": 123
+        },
+        {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "fold": 4,
+          "C": 0.01,
+          "l1_ratio": 0.15,
+          "n_nonzero": 125
+        },
+        {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "fold": 5,
+          "C": 0.01,
+          "l1_ratio": 0.15,
+          "n_nonzero": 134
+        }
+      ],
+      "mean": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "roc_auc": 1.0,
+        "f1": 1.0
+      },
+      "std": {
+        "accuracy": 0.0,
+        "balanced_accuracy": 0.0,
+        "roc_auc": 0.0,
+        "f1": 0.0
+      },
+      "pooled_roc_auc": 1.0
+    },
+    "l2_logistic": {
+      "folds": [
+        {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "fold": 1,
+          "C": 0.01,
+          "l1_ratio": 0.0,
+          "n_nonzero": 250
+        },
+        {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "fold": 2,
+          "C": 0.01,
+          "l1_ratio": 0.0,
+          "n_nonzero": 250
+        },
+        {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "fold": 3,
+          "C": 0.01,
+          "l1_ratio": 0.0,
+          "n_nonzero": 250
+        },
+        {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "fold": 4,
+          "C": 0.01,
+          "l1_ratio": 0.0,
+          "n_nonzero": 250
+        },
+        {
+          "accuracy": 1.0,
+          "balanced_accuracy": 1.0,
+          "f1": 1.0,
+          "roc_auc": 1.0,
+          "fold": 5,
+          "C": 0.01,
+          "l1_ratio": 0.0,
+          "n_nonzero": 250
+        }
+      ],
+      "mean": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "roc_auc": 1.0,
+        "f1": 1.0
+      },
+      "std": {
+        "accuracy": 0.0,
+        "balanced_accuracy": 0.0,
+        "roc_auc": 0.0,
+        "f1": 0.0
+      },
+      "pooled_roc_auc": 1.0
+    },
+    "majority_baseline": {
+      "folds": [
+        {
+          "accuracy": 0.7547169811320755,
+          "balanced_accuracy": 0.5,
+          "f1": 0.8602150537634409,
+          "roc_auc": 0.5,
+          "fold": 1,
+          "majority_class": 1,
+          "training_prevalence": 0.7452830188679245
+        },
+        {
+          "accuracy": 0.7547169811320755,
+          "balanced_accuracy": 0.5,
+          "f1": 0.8602150537634409,
+          "roc_auc": 0.5,
+          "fold": 2,
+          "majority_class": 1,
+          "training_prevalence": 0.7452830188679245
+        },
+        {
+          "accuracy": 0.7547169811320755,
+          "balanced_accuracy": 0.5,
+          "f1": 0.8602150537634409,
+          "roc_auc": 0.5,
+          "fold": 3,
+          "majority_class": 1,
+          "training_prevalence": 0.7452830188679245
+        },
+        {
+          "accuracy": 0.7358490566037735,
+          "balanced_accuracy": 0.5,
+          "f1": 0.8478260869565217,
+          "roc_auc": 0.5,
+          "fold": 4,
+          "majority_class": 1,
+          "training_prevalence": 0.75
+        },
+        {
+          "accuracy": 0.7358490566037735,
+          "balanced_accuracy": 0.5,
+          "f1": 0.8478260869565217,
+          "roc_auc": 0.5,
+          "fold": 5,
+          "majority_class": 1,
+          "training_prevalence": 0.75
+        }
+      ],
+      "mean": {
+        "accuracy": 0.7471698113207548,
+        "balanced_accuracy": 0.5,
+        "roc_auc": 0.5,
+        "f1": 0.8552594670406732
+      },
+      "std": {
+        "accuracy": 0.010334387877456023,
+        "balanced_accuracy": 0.0,
+        "roc_auc": 0.0,
+        "f1": 0.006785716584332365
+      },
+      "pooled_roc_auc": 0.4880144730891
+    },
+    "elastic_net_mean_nonzero": 127.8,
+    "n_genes_nonzero_every_fold": 95,
+    "genes_nonzero_every_fold": [
+      "COL18A1-AS1",
+      "FZD9",
+      "C5orf49",
+      "LOC101930608",
+      "CACNG4",
+      "TMEM75",
+      "GRIK3",
+      "GTSE1",
+      "E2F1",
+      "HEXA-AS1",
+      "ATP11A-AS1",
+      "SLC25A21-AS1",
+      "MIR4435-2HG",
+      "DEFB132",
+      "DMPK",
+      "BCAS1",
+      "RGMB-AS1",
+      "MIR3681HG",
+      "RIBC1",
+      "GDNF",
+      "LOC338667",
+      "SLC34A1",
+      "GPR141",
+      "C16orf52",
+      "LOC101927059",
+      "LOC105377348",
+      "ELFN1",
+      "LOC100129455",
+      "MIR924HG",
+      "USF2",
+      "DBF4B",
+      "ATAD3A",
+      "LINC00508",
+      "TDRD10",
+      "LOC101929460",
+      "IL1RL1",
+      "ZNF552",
+      "FFAR4",
+      "CCDC170",
+      "GPR1",
+      "LOC101930405",
+      "LOC643711",
+      "RGAG4",
+      "LOC643085",
+      "LOC100289230",
+      "ZNF649-AS1",
+      "LOC101927495",
+      "SKA1",
+      "PCDHB18P",
+      "LINC01448",
+      "IFNA10",
+      "HTR7P1",
+      "CCDC96",
+      "UBXN10-AS1",
+      "FRMD7",
+      "LINC01416",
+      "HCN4",
+      "ANKS1B",
+      "SLC17A6",
+      "KCNE2",
+      "CASC1",
+      "ORC1",
+      "EEF1A2",
+      "DLG1-AS1",
+      "LRRC46",
+      "LOC101929089",
+      "LOC101927263",
+      "CMYA5",
+      "NFIX",
+      "MAMDC4",
+      "LOC101929586",
+      "INO80B",
+      "CTDNEP1",
+      "ELK1",
+      "CTAGE1",
+      "LINC01013",
+      "KRT32",
+      "LOC101927914",
+      "LOC105370629",
+      "LOC441025",
+      "LOC101927609",
+      "DTWD2",
+      "CASP5",
+      "ATAD3B",
+      "GUCY2D",
+      "DYNLRB2",
+      "MAGEC3",
+      "PCDHGA10",
+      "SLC34A2",
+      "ZNF358",
+      "SMTN",
+      "MFSD6L",
+      "HRC",
+      "LINC01467",
+      "KLF16"
+    ],
+    "permuted_label_pooled_roc_auc": 0.47617970752299116
+  },
+  "enrichment": {
+    "service": "g:Profiler",
+    "version": "e114_eg62_p19_9dc92ac8",
+    "timestamp": "2026-11-24T16:25:37.683279+00:00",
+    "domain_scope": "custom",
+    "background_fallback": false,
+    "sources": [
+      "GO:BP",
+      "KEGG",
+      "REAC"
+    ],
+    "up": {
+      "n_genes_passing": 188,
+      "n_genes_queried": 188,
+      "n_terms": 104,
+      "top": [
+        {
+          "direction": "TNBC",
+          "source": "GO:BP",
+          "native": "GO:0060429",
+          "name": "epithelium development",
+          "p_value": 1.6978392833502235e-07,
+          "term_size": 1137,
+          "query_size": 180,
+          "intersection_size": 39,
+          "precision": 0.21666666666666667,
+          "recall": 0.03430079155672823
+        },
+        {
+          "direction": "TNBC",
+          "source": "KEGG",
+          "native": "KEGG:04110",
+          "name": "Cell cycle",
+          "p_value": 3.828019597533818e-07,
+          "term_size": 156,
+          "query_size": 180,
+          "intersection_size": 13,
+          "precision": 0.07222222222222222,
+          "recall": 0.08333333333333333
+        },
+        {
+          "direction": "TNBC",
+          "source": "KEGG",
+          "native": "KEGG:04519",
+          "name": "Cadherin signaling",
+          "p_value": 1.3248084358693466e-06,
+          "term_size": 359,
+          "query_size": 180,
+          "intersection_size": 18,
+          "precision": 0.1,
+          "recall": 0.05013927576601671
+        },
+        {
+          "direction": "TNBC",
+          "source": "REAC",
+          "native": "REAC:R-HSA-6809371",
+          "name": "Formation of the cornified envelope",
+          "p_value": 1.3971265561316627e-06,
+          "term_size": 98,
+          "query_size": 180,
+          "intersection_size": 11,
+          "precision": 0.06111111111111111,
+          "recall": 0.11224489795918367
+        },
+        {
+          "direction": "TNBC",
+          "source": "GO:BP",
+          "native": "GO:0000278",
+          "name": "mitotic cell cycle",
+          "p_value": 6.36725030512712e-06,
+          "term_size": 838,
+          "query_size": 180,
+          "intersection_size": 31,
+          "precision": 0.17222222222222222,
+          "recall": 0.03699284009546539
+        },
+        {
+          "direction": "TNBC",
+          "source": "GO:BP",
+          "native": "GO:1905818",
+          "name": "regulation of chromosome separation",
+          "p_value": 7.70588335528206e-06,
+          "term_size": 75,
+          "query_size": 180,
+          "intersection_size": 11,
+          "precision": 0.06111111111111111,
+          "recall": 0.14666666666666667
+        },
+        {
+          "direction": "TNBC",
+          "source": "GO:BP",
+          "native": "GO:0050794",
+          "name": "regulation of cellular process",
+          "p_value": 1.0219122369875575e-05,
+          "term_size": 9878,
+          "query_size": 180,
+          "intersection_size": 137,
+          "precision": 0.7611111111111111,
+          "recall": 0.013869204292366875
+        },
+        {
+          "direction": "TNBC",
+          "source": "GO:BP",
+          "native": "GO:0010965",
+          "name": "regulation of mitotic sister chromatid separation",
+          "p_value": 1.4538722379864282e-05,
+          "term_size": 60,
+          "query_size": 180,
+          "intersection_size": 10,
+          "precision": 0.05555555555555555,
+          "recall": 0.16666666666666666
+        }
+      ]
+    },
+    "down": {
+      "n_genes_passing": 298,
+      "n_genes_queried": 298,
+      "n_terms": 7,
+      "top": [
+        {
+          "direction": "non-TNBC",
+          "source": "GO:BP",
+          "native": "GO:0009719",
+          "name": "response to endogenous stimulus",
+          "p_value": 0.0024895526401882318,
+          "term_size": 1386,
+          "query_size": 271,
+          "intersection_size": 47,
+          "precision": 0.17343173431734318,
+          "recall": 0.03391053391053391
+        },
+        {
+          "direction": "non-TNBC",
+          "source": "KEGG",
+          "native": "KEGG:04152",
+          "name": "AMPK signaling pathway",
+          "p_value": 0.005408941064476418,
+          "term_size": 117,
+          "query_size": 271,
+          "intersection_size": 9,
+          "precision": 0.033210332103321034,
+          "recall": 0.07692307692307693
+        },
+        {
+          "direction": "non-TNBC",
+          "source": "KEGG",
+          "native": "KEGG:04081",
+          "name": "Hormone signaling",
+          "p_value": 0.0068465811988581,
+          "term_size": 212,
+          "query_size": 271,
+          "intersection_size": 12,
+          "precision": 0.04428044280442804,
+          "recall": 0.05660377358490566
+        },
+        {
+          "direction": "non-TNBC",
+          "source": "GO:BP",
+          "native": "GO:0071495",
+          "name": "cellular response to endogenous stimulus",
+          "p_value": 0.007980350264583753,
+          "term_size": 1167,
+          "query_size": 271,
+          "intersection_size": 41,
+          "precision": 0.15129151291512916,
+          "recall": 0.03513281919451585
+        },
+        {
+          "direction": "non-TNBC",
+          "source": "GO:BP",
+          "native": "GO:0060749",
+          "name": "mammary gland alveolus development",
+          "p_value": 0.015182429650475353,
+          "term_size": 20,
+          "query_size": 271,
+          "intersection_size": 6,
+          "precision": 0.02214022140221402,
+          "recall": 0.3
+        },
+        {
+          "direction": "non-TNBC",
+          "source": "GO:BP",
+          "native": "GO:0061377",
+          "name": "mammary gland lobule development",
+          "p_value": 0.015182429650475353,
+          "term_size": 20,
+          "query_size": 271,
+          "intersection_size": 6,
+          "precision": 0.02214022140221402,
+          "recall": 0.3
+        },
+        {
+          "direction": "non-TNBC",
+          "source": "REAC",
+          "native": "REAC:R-HSA-9006931",
+          "name": "Signaling by Nuclear Receptors",
+          "p_value": 0.02926719323349606,
+          "term_size": 243,
+          "query_size": 271,
+          "intersection_size": 13,
+          "precision": 0.04797047970479705,
+          "recall": 0.053497942386831275
+        }
+      ]
+    }
+  },
+  "heatmap_genes": [
+    "FZD9",
+    "COL18A1-AS1",
+    "SKA1",
+    "GTSE1",
+    "ORC1",
+    "EN1",
+    "DBF4B",
+    "DLX5",
+    "LOC338667",
+    "LOC101930608",
+    "KCNK5",
+    "EEF1A2",
+    "FOLH1B",
+    "TBC1D9",
+    "SLC34A2",
+    "ART3",
+    "HORMAD1",
+    "NRTN",
+    "TCF19",
+    "ARHGAP22",
+    "SOX8",
+    "NFIX",
+    "FAM64A",
+    "ZNF552",
+    "CMYA5",
+    "SHC4",
+    "SMTN",
+    "CCDC170",
+    "ROPN1",
+    "MLPH",
+    "CCDC96",
+    "PRKCQ-AS1",
+    "SIDT1",
+    "ROPN1B",
+    "PALM2",
+    "GRIK3",
+    "CT83",
+    "LOC101927263",
+    "DACH1",
+    "FYCO1"
+  ],
+  "accession": "GSE76275",
+  "subseries": [
+    "GSE76124",
+    "GSE76274"
+  ],
+  "platform": "GPL570",
+  "soft_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE76275&targ=self&form=text&view=brief",
+  "matrix_urls": {
+    "GSE76124": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE76nnn/GSE76124/matrix/GSE76124_series_matrix.txt.gz",
+    "GSE76274": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE76nnn/GSE76274/matrix/GSE76274_series_matrix.txt.gz"
+  },
+  "annotation_url": "https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPLnnn/GPL570/annot/GPL570.annot.gz",
+  "checksums": {
+    "GSE76124": "bdbfffdfe0d95c9e83547ace46c27926eeddde3cac79b042d91229c61cf91412",
+    "GSE76274": "5538bc7b4c185537decb042b93151bd8da06bcb7611560da6a94b4534fda661b",
+    "GPL570": "d7cd44352127b1e34f3a720ebea86093ef255a38f1612a85a2962b71bde8f394"
+  },
+  "data_processing": [
+    "The data were analyzed with  Affy package in R, RMA method"
+  ],
+  "annotation_date": "Aug 09 2016",
+  "external": {
+    "cohort": "TCGA-BRCA",
+    "expression_url": "https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/HiSeqV2.gz",
+    "clinical_url": "https://tcga.xenahubs.net/download/TCGA.BRCA.sampleMap/BRCA_clinicalMatrix",
+    "expression_processing": "UCSC Xena TCGA.BRCA.sampleMap/HiSeqV2, log2(normalized RSEM count + 1), one matrix for the BRCA cohort",
+    "er_column": "breast_carcinoma_estrogen_receptor_status",
+    "pr_column": "breast_carcinoma_progesterone_receptor_status",
+    "her2_column": "lab_proc_her2_neu_immunohistochemistry_receptor_status",
+    "n_clinical_rows": 1247,
+    "n_labelled_primary_tumors": 722,
+    "n_with_expression": 721,
+    "checksums": {
+      "clinical": "39eb3be0fb86e6a577bd2cc01502a7fa5a271e1e1cba294e9dc644ad99580d7f",
+      "expression": "263bf67245cc4b9062676583c0ff0306f08471a26aafd5504037e1da22133746"
+    },
+    "n_samples_analysed": 721,
+    "n_tnbc": 116,
+    "n_non_tnbc": 605,
+    "n_samples_excluded": 0,
+    "correlation_threshold": 0.8,
+    "correlation_min": 0.8657061441376026,
+    "correlation_median": 0.935013155758041,
+    "correlation_max": 0.9506287328600127,
+    "n_genes": 20530,
+    "scale": {
+      "min": 0.0,
+      "median": 7.6028,
+      "max": 20.8112,
+      "assumed_log2": true
+    },
+    "differential_expression": {
+      "n_genes_tested": 20530,
+      "fdr_threshold": 0.05,
+      "log2fc_threshold": 1.0,
+      "n_fdr_only": 13650,
+      "n_significant": 2636,
+      "n_higher_in_tnbc": 1361,
+      "n_higher_in_non_tnbc": 1275,
+      "median_welch_df": 152.88602668567606
+    },
+    "transfer": {
+      "n_shared_genes": 16041,
+      "n_features": 250,
+      "C": 0.01,
+      "l1_ratio": 0.15,
+      "n_nonzero": 114,
+      "convergence_warnings": 0,
+      "scaling": "Each gene was z-scored inside its own cohort.",
+      "positive_class": "TNBC",
+      "decision_threshold": 0.5,
+      "n_test_samples": 721,
+      "n_test_tnbc": 116,
+      "n_test_non_tnbc": 605,
+      "elastic_net": {
+        "accuracy": 0.21497919556171982,
+        "balanced_accuracy": 0.5322314049586777,
+        "f1": 0.2907268170426065,
+        "roc_auc": 0.9418495297805642
+      },
+      "training_majority_baseline": {
+        "accuracy": 0.1608876560332871,
+        "balanced_accuracy": 0.5,
+        "f1": 0.27718040621266427,
+        "roc_auc": 0.5
+      },
+      "external_majority_baseline": {
+        "accuracy": 0.8391123439667129,
+        "balanced_accuracy": 0.5,
+        "f1": 0.0,
+        "roc_auc": 0.5
+      },
+      "roc_auc_on_figure": 0.9418495297805642,
+      "genes_head": [
+        "FZD9",
+        "GTSE1",
+        "SKA1",
+        "DBF4B",
+        "EN1",
+        "CACNG4",
+        "C5orf49",
+        "GDNF",
+        "FRMD7",
+        "ATAD3A",
+        "E2F1",
+        "TBX19",
+        "DLX5",
+        "RIBC1",
+        "GRIK3"
+      ]
+    },
+    "within_batch": {
+      "positive_class": "TNBC",
+      "n_samples": 721,
+      "n_tnbc": 116,
+      "n_non_tnbc": 605,
+      "outer_splits": 5,
+      "inner_splits": 5,
+      "n_features": 250,
+      "cs": [
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0
+      ],
+      "l1_ratios": [
+        0.15,
+        0.5,
+        0.85
+      ],
+      "random_state": 42,
+      "convergence_warnings": 0,
+      "class_weight": "balanced",
+      "decision_threshold": 0.5,
+      "elastic_net": {
+        "folds": [
+          {
+            "accuracy": 0.9517241379310345,
+            "balanced_accuracy": 0.9376721763085399,
+            "f1": 0.8627450980392157,
+            "roc_auc": 0.9734848484848484,
+            "fold": 1,
+            "C": 0.01,
+            "l1_ratio": 0.15,
+            "n_nonzero": 105
+          },
+          {
+            "accuracy": 0.8888888888888888,
+            "balanced_accuracy": 0.8634567014013654,
+            "f1": 0.7037037037037037,
+            "roc_auc": 0.9349622709306504,
+            "fold": 2,
+            "C": 0.01,
+            "l1_ratio": 0.5,
+            "n_nonzero": 39
+          },
+          {
+            "accuracy": 0.9236111111111112,
+            "balanced_accuracy": 0.9193316564858067,
+            "f1": 0.7924528301886793,
+            "roc_auc": 0.9392741645706073,
+            "fold": 3,
+            "C": 0.1,
+            "l1_ratio": 0.5,
+            "n_nonzero": 46
+          },
+          {
+            "accuracy": 0.9652777777777778,
+            "balanced_accuracy": 0.9617319439453826,
+            "f1": 0.8979591836734694,
+            "roc_auc": 0.9852676967301474,
+            "fold": 4,
+            "C": 0.1,
+            "l1_ratio": 0.85,
+            "n_nonzero": 28
+          },
+          {
+            "accuracy": 0.9305555555555556,
+            "balanced_accuracy": 0.9058569888609413,
+            "f1": 0.8,
+            "roc_auc": 0.9820337765001796,
+            "fold": 5,
+            "C": 0.01,
+            "l1_ratio": 0.15,
+            "n_nonzero": 110
+          }
+        ],
+        "mean": {
+          "accuracy": 0.9320114942528737,
+          "balanced_accuracy": 0.9176098934004072,
+          "roc_auc": 0.9630045514432866,
+          "f1": 0.8113721631210137
+        },
+        "std": {
+          "accuracy": 0.02927233859865902,
+          "balanced_accuracy": 0.03682021855143056,
+          "roc_auc": 0.024068113905567724,
+          "f1": 0.07452559120230712
+        },
+        "pooled_roc_auc": 0.9626389284696495
+      },
+      "l2_logistic": {
+        "folds": [
+          {
+            "accuracy": 0.9586206896551724,
+            "balanced_accuracy": 0.9585055096418733,
+            "f1": 0.8846153846153846,
+            "roc_auc": 0.9727961432506886,
+            "fold": 1,
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "n_nonzero": 250
+          },
+          {
+            "accuracy": 0.875,
+            "balanced_accuracy": 0.8551922385914481,
+            "f1": 0.6785714285714286,
+            "roc_auc": 0.9338842975206613,
+            "fold": 2,
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "n_nonzero": 250
+          },
+          {
+            "accuracy": 0.9166666666666666,
+            "balanced_accuracy": 0.9328063241106719,
+            "f1": 0.7857142857142857,
+            "roc_auc": 0.9302910528206971,
+            "fold": 3,
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "n_nonzero": 250
+          },
+          {
+            "accuracy": 0.9652777777777778,
+            "balanced_accuracy": 0.9617319439453826,
+            "f1": 0.8979591836734694,
+            "roc_auc": 0.9856270212001437,
+            "fold": 4,
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "n_nonzero": 250
+          },
+          {
+            "accuracy": 0.9375,
+            "balanced_accuracy": 0.9099892202659001,
+            "f1": 0.8163265306122449,
+            "roc_auc": 0.9795185052102048,
+            "fold": 5,
+            "C": 0.01,
+            "l1_ratio": 0.0,
+            "n_nonzero": 250
+          }
+        ],
+        "mean": {
+          "accuracy": 0.9306130268199233,
+          "balanced_accuracy": 0.9236450473110551,
+          "roc_auc": 0.9604234040004791,
+          "f1": 0.8126373626373627
+        },
+        "std": {
+          "accuracy": 0.03647195583473698,
+          "balanced_accuracy": 0.04365220829362998,
+          "roc_auc": 0.026292644632479385,
+          "f1": 0.08827908232009186
+        },
+        "pooled_roc_auc": 0.9603305785123967
+      },
+      "majority_baseline": {
+        "folds": [
+          {
+            "accuracy": 0.8344827586206897,
+            "balanced_accuracy": 0.5,
+            "f1": 0.0,
+            "roc_auc": 0.5,
+            "fold": 1,
+            "majority_class": 0,
+            "training_prevalence": 0.1597222222222222
+          },
+          {
+            "accuracy": 0.8402777777777778,
+            "balanced_accuracy": 0.5,
+            "f1": 0.0,
+            "roc_auc": 0.5,
+            "fold": 2,
+            "majority_class": 0,
+            "training_prevalence": 0.1611785095320624
+          },
+          {
+            "accuracy": 0.8402777777777778,
+            "balanced_accuracy": 0.5,
+            "f1": 0.0,
+            "roc_auc": 0.5,
+            "fold": 3,
+            "majority_class": 0,
+            "training_prevalence": 0.1611785095320624
+          },
+          {
+            "accuracy": 0.8402777777777778,
+            "balanced_accuracy": 0.5,
+            "f1": 0.0,
+            "roc_auc": 0.5,
+            "fold": 4,
+            "majority_class": 0,
+            "training_prevalence": 0.1611785095320624
+          },
+          {
+            "accuracy": 0.8402777777777778,
+            "balanced_accuracy": 0.5,
+            "f1": 0.0,
+            "roc_auc": 0.5,
+            "fold": 5,
+            "majority_class": 0,
+            "training_prevalence": 0.1611785095320624
+          }
+        ],
+        "mean": {
+          "accuracy": 0.8391187739463601,
+          "balanced_accuracy": 0.5,
+          "roc_auc": 0.5,
+          "f1": 0.0
+        },
+        "std": {
+          "accuracy": 0.00259161135323252,
+          "balanced_accuracy": 0.0,
+          "roc_auc": 0.0,
+          "f1": 0.0
+        },
+        "pooled_roc_auc": 0.496551724137931
+      },
+      "elastic_net_mean_nonzero": 65.6,
+      "n_genes_nonzero_every_fold": 6,
+      "genes_nonzero_every_fold": [
+        "C9orf98",
+        "FSIP1",
+        "ESR1",
+        "CDCA7",
+        "CENPW",
+        "UGT8"
+      ]
+    },
+    "replication": {
+      "n_discovery_called": 486,
+      "n_found_in_external": 448,
+      "n_same_direction": 447,
+      "n_same_direction_and_fdr": 445,
+      "n_same_direction_and_called": 394
+    }
+  },
+  "elapsed_seconds": 71.95486226399998
+}
