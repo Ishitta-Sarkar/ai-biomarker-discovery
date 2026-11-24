@@ -1,0 +1,9 @@
+#ID = probe
+!platform_table_begin
+ID	Gene title	Gene symbol	Gene ID
+1007_s_at	discoidin	DDR1	780
+1053_at	replication	RFC2	5982
+AFFX-BioB	control	---	
+2000_at	ambiguous	AAA///BBB	1
+2001_at	second ddr1	DDR1	780
+!platform_table_end

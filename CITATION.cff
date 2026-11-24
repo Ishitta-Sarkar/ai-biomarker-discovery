@@ -1,0 +1,55 @@
+cff-version: 1.2.0
+title: TNBC transcriptomic biomarker analysis
+message: If you use this analysis, please cite it using the metadata below.
+type: software
+authors:
+  - family-names: Sarkar
+    given-names: Ishitta
+    orcid: https://orcid.org/0009-0008-1028-6010
+repository-code: https://github.com/Ishitta-Sarkar/ai-biomarker-discovery
+url: https://github.com/Ishitta-Sarkar/ai-biomarker-discovery
+license: MIT
+version: 1.0.0
+date-released: 2026-11-24
+keywords:
+  - gene-expression
+  - differential-expression
+  - triple-negative-breast-cancer
+  - biomarker-discovery
+references:
+  - type: article
+    title: Comprehensive genomic analysis identifies novel subtypes and targets of triple-negative breast cancer
+    authors:
+      - family-names: Burstein
+        given-names: Matthew D.
+      - family-names: Tsimelzon
+        given-names: Anna
+      - family-names: Poage
+        given-names: Graham M.
+      - family-names: Covington
+        given-names: Kyle R.
+      - family-names: Contreras
+        given-names: Alejandro
+      - family-names: Fuqua
+        given-names: Suzanne A. W.
+      - family-names: Savage
+        given-names: Michelle I.
+      - family-names: Osborne
+        given-names: C. Kent
+      - family-names: Hilsenbeck
+        given-names: Susan G.
+      - family-names: Chang
+        given-names: Jenny C.
+      - family-names: Mills
+        given-names: Gordon B.
+      - family-names: Lau
+        given-names: Ching C.
+      - family-names: Brown
+        given-names: Powel H.
+    year: 2015
+    journal: Clinical Cancer Research
+    volume: 21
+    issue: 7
+    start: 1688
+    end: 1698
+    doi: 10.1158/1078-0432.CCR-14-0432
