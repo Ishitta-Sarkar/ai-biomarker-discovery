@@ -30,7 +30,7 @@ TNBC in TCGA-BRCA means ER, PR, and HER2 IHC were all Negative. non-TNBC means e
 
 ## Results
 
-Numbers are from one run. The machine-readable copy is `results/summary.json`. The generated prose is `results/RESULTS.md`.
+Numbers are from one run. The machine-readable copy is `results/summary.json`. The written results summary is `results/RESULTS.md`.
 
 ### TCGA-BRCA, processed as one cohort
 
